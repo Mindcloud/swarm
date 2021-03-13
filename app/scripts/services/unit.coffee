@@ -84,6 +84,10 @@ angular.module('swarmApp').factory 'ProducerPaths', ($log, ProducerPath) -> clas
     return @_getCoefficients true
   
   count: (secs) ->
+    # Horner's method should be faster here:
+    # https://en.wikipedia.org/wiki/Horner's_method
+    # http://jsbin.com/doqudoxopo/edit?html,output
+    # ...but I tried it and it wasn't.
     ret = new Decimal 0
     for coeff, degree in @getCoefficients()
       # c * (t^d)/d!
@@ -103,13 +107,13 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
       ret.unit = @game.unit prod.unittype
       ret.val = new Decimal ret.val
       return ret
-    @prodByName = _.indexBy @prod, (prod) -> prod.unit.name
+    @prodByName = _.keyBy @prod, (prod) -> prod.unit.name
     @cost = _.map @unittype.cost, (cost) =>
       ret = _.clone cost
       ret.unit = @game.unit cost.unittype
       ret.val = new Decimal ret.val
       return ret
-    @costByName = _.indexBy @cost, (cost) -> cost.unit.name
+    @costByName = _.keyBy @cost, (cost) -> cost.unit.name
     @warnfirst = _.map @unittype.warnfirst, (warnfirst) =>
       ret = _.clone warnfirst
       ret.unit = @game.unit warnfirst.unittype
@@ -117,7 +121,7 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
     @showparent = @game.unit @unittype.showparent
     @upgrades =
       list: (upgrade for upgrade in @game.upgradelist() when @unittype == upgrade.type.unittype or @showparent?.unittype == upgrade.type.unittype)
-    @upgrades.byName = _.indexBy @upgrades.list, 'name'
+    @upgrades.byName = _.keyBy @upgrades.list, 'name'
     @upgrades.byClass = _.groupBy @upgrades.list, (u) -> u.type.class
 
     @requires = _.map @unittype.requires, (require) =>
@@ -183,6 +187,7 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
       if @hasStat 'capBase'
         ret = @stat 'capBase'
         ret = ret.times @stat 'capMult', 1
+        ret = ret.plus @stat 'capFlat', 0
         return ret
   capValue: (val) ->
     cap = @_getCap()
@@ -245,9 +250,9 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
           if @constructor.ESTIMATE_BISECTION
             # Bisection method - slower/more complex, but more precise
             # if we couldn't pick a starting point, pretend a second's passed and try again, possibly quitting if we finished in a second or less. This basically only happens in unit tests.
-            maxSec = linear ? remaining.dividedBy @_countInSecsFromNow(Decimal.ONE).minus(count)
+            maxSec = linear ? remaining.dividedBy @_countInSecsFromNow(new Decimal(1)).minus(count)
             if not maxSec.greaterThan(0)
-              ret = Decimal.ONE
+              ret = new Decimal(1)
             else
               ret = @estimateSecsUntilEarnedBisection num, maxSec
           else
@@ -260,7 +265,7 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
               if not coeff.isZero()
                 #loop starts iterating from 0, not 3. no need to recalculate first few degrees, we did more precise math for them earlier.
                 deg += 3
-                ret = Decimal.min ret, remaining.dividedBy(coeff).times(math.factorial deg).pow(Decimal.ONE.dividedBy deg)
+                ret = Decimal.min ret, remaining.dividedBy(coeff).times(math.factorial deg).pow(new Decimal(1).dividedBy deg)
                 #$log.debug 'single-degree estimate', deg, ret+''
     #$log.debug 'done estimating', ret.toNumber()
     return ret
@@ -399,7 +404,7 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
     @maxCostMet().greaterThan 0
 
   isBuyable: (ignoreCost=false) ->
-    return (@isCostMet() or ignoreCost) and @isVisible() and not @unittype.unbuyable
+    return (@isCostMet() or ignoreCost) and @isBuyButtonVisible() and not @unittype.unbuyable
 
   buyMax: (percent) ->
     @buy @maxCostMet percent
@@ -420,6 +425,11 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
         cost.unit._subtractCount cost.val.times num
       twinnum = num.times @twinMult()
       @_addCount twinnum
+      for effect in @effect
+        effect.onBuyUnit twinnum
+      # This is a hideous hack that really should be an addUnits effect, but it starts an infinite loop (energy -> mtxEnergy -> energy-cap -> energy...) that I really can't be arsed to debug this late into swarmsim's life.
+      if @name == 'energy'
+        @game.unit('mtxEnergy')._addCount twinnum
       return {num:num, twinnum:twinnum}
 
   isNewlyUpgradable: ->
@@ -482,6 +492,20 @@ angular.module('swarmApp').factory 'Unit', (util, $log, Effect, ProducerPaths, U
   url: ->
     @tab.url this
 
+  # for the addUnitTimed effect
+  addUnitTimer: ->
+    key = "addUnitTimed-#{@name}"
+    return @game.session.state.date[key] ? new Date 0
+  addUnitTimerElapsedMillis: (now=@game.now) ->
+    return now.getTime() - @addUnitTimer().getTime()
+  addUnitTimerRemainingMillis: (durationMillis, now=@game.now) ->
+    return Math.max 0, durationMillis - @addUnitTimerElapsedMillis(now)
+  isAddUnitTimerReady: (durationMillis, now=@game.now) ->
+    return @addUnitTimerRemainingMillis(durationMillis) == 0
+  setAddUnitTimer: (now=@game.now) ->
+    key = "addUnitTimed-#{@name}"
+    @game.session.state.date[key] = now
+    util.assert @addUnitTimerElapsedMillis(now) == 0
 
 ###*
  # @ngdoc service
@@ -499,7 +523,7 @@ angular.module('swarmApp').factory 'UnitType', -> class Unit
   producerNames: ->
     _.mapValues @producerPath, (paths) ->
       _.map paths, (path) ->
-        _.pluck path, 'name'
+        _.map path, 'name'
 
 angular.module('swarmApp').factory 'UnitTypes', (spreadsheetUtil, UnitType, util, $log) -> class UnitTypes
   constructor: (unittypes=[]) ->

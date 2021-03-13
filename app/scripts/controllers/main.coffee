@@ -7,9 +7,14 @@
  # # Main2Ctrl
  # Controller of the swarmApp
 ###
-angular.module('swarmApp').controller 'MainCtrl', ($scope, $log, game, $routeParams, $location, version, options) ->
+angular.module('swarmApp').controller 'MainCtrl', ($scope, $log, game, $routeParams, $location, version, options, hotkeys) ->
   $scope.game = game
   $scope.options = options
+
+  # special case: buy-energy links redirect to crystals
+  if $routeParams.unit == 'energy' and $routeParams.tab == 'energy' and $location.search().num?
+    console.log 'hellohello', $location.search().num
+    $location.path '/tab/energy/unit/crystal'
   
   $scope.cur = {}
   $scope.cur.unit = $scope.game.unitBySlug $routeParams.unit
@@ -47,17 +52,17 @@ angular.module('swarmApp').controller 'MainCtrl', ($scope, $log, game, $routePar
     if tab.isVisible()
       return tab
     return findtab index, step
-  # No keyboard shortcuts for now. TODO: make more, decent keyboard shortcuts; game should be playable without mouse.
-  #binds = hotkeys.bindTo $scope
-  #binds.add
-  #  combo: 'left'
-  #  description: 'Go to previous tab'
-  #  callback: ->
-  #    if tab = findtab $scope.cur.tab.index, -1
-  #      $location.url "/tab/#{tab.name}"
-  #binds.add
-  #  combo: 'right'
-  #  description: 'Go to next tab'
-  #  callback: ->
-  #    if tab = findtab $scope.cur.tab.index, +1
-  #      $location.url "/tab/#{tab.name}"
+
+  hk = hotkeys.bindTo($scope)
+  keys = '1234567890'
+  # shift+<n> for 11-20
+  keys = keys.split('').concat(keys.split('').map((k) -> 'shift+'+k))
+  for unit, i in _.reverse(_.filter($scope.cur.tab.sortUnits(), $scope.filterVisible))
+    do (unit, i) ->
+      if keys[i]?
+        hk.add
+          combo: keys[i]
+          # clutters the screen
+          #description: 'Select '+unit.type.plural
+          callback: () ->
+            $location.path '/unit/'+unit.type.slug

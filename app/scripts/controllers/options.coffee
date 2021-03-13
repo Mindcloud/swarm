@@ -7,7 +7,7 @@
  # # OptionsCtrl
  # Controller of the swarmApp
 ###
-angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options, session, game, env, $log, backfill, isKongregate, storage, feedback, dropboxSyncer) ->
+angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options, session, game, env, $log, backfill, isKongregate, storage, feedback) ->
   $scope.options = options
   $scope.game = game
   $scope.session = session
@@ -15,7 +15,6 @@ angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options
   $scope.imported = {}
 
   $scope.isKongregate = isKongregate
-  $scope.isDropbox = dropboxSyncer.isVisible()
 
   $scope.duration_examples = [
       moment.duration(16,'seconds')
@@ -35,6 +34,11 @@ angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options
     iframeMinSize:
       x: options.iframeMinX()
       y: options.iframeMinY()
+  $scope.setFpsSlider = (fps) ->
+    # slider rounding shouldn't overwrite decimals from fpsNum
+    if Math.abs(options.fps() - fps) >= 1
+      options.fps(fps)
+      $scope.form.fpsNum = options.fps()
   $scope.setTheme = (name) ->
     $scope.options.theme name
     $scope.form.isCustomTheme = false
@@ -48,6 +52,12 @@ angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options
   # http://stackoverflow.com/questions/14995884/select-text-on-input-focus-in-angular-js
   $scope.select = ($event) ->
     $event.target.select()
+  $scope.copy = ($event) ->
+    document.execCommand('copy')
+    ex = document.getElementById('export')
+    ex.focus()
+    ex.select()
+    document.execCommand('copy')
 
   savedDataDetails = (store) ->
     try
@@ -87,13 +97,6 @@ angular.module('swarmApp').controller 'OptionsCtrl', ($scope, $location, options
       storage.removeItem session.id
       $scope.game.reset true
       $location.url '/'
-
-  $scope.shorturl = ->
-    feedback.createTinyurl($scope.form.export)
-    .done (data, status, xhr) ->
-      $scope.form.export = data.id
-    .fail (data, status, error) ->
-      $scope.imported.error = true
 
   $scope.clearThemeExtra = ->
     $scope.form.themeExtraSuccess = null

@@ -129,6 +129,48 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 100
       },
       {
+        "description": "Have $REQUIRED expansions at once",
+        "label": "we have become as a vapor",
+        "longdesc": "",
+        "name": "expansion7",
+        "points": 70,
+        "requires.event": "",
+        "requires.unittype": "",
+        "requires.upgradetype": "expansion",
+        "requires.val": 1000,
+        "visible.unittype": "",
+        "visible.upgradetype": "expansion",
+        "visible.val": 200
+      },
+      {
+        "description": "Have $REQUIRED expansions at once",
+        "label": "imperialus conceptus",
+        "longdesc": "",
+        "name": "expansion8",
+        "points": 80,
+        "requires.event": "",
+        "requires.unittype": "",
+        "requires.upgradetype": "expansion",
+        "requires.val": 2000,
+        "visible.unittype": "",
+        "visible.upgradetype": "expansion",
+        "visible.val": 500
+      },
+      {
+        "description": "Have $REQUIRED expansions at once",
+        "label": "manifest destiny",
+        "longdesc": "",
+        "name": "expansion9",
+        "points": 90,
+        "requires.event": "",
+        "requires.unittype": "",
+        "requires.upgradetype": "expansion",
+        "requires.val": 5000,
+        "visible.unittype": "",
+        "visible.upgradetype": "expansion",
+        "visible.val": 1000
+      },
+      {
         "description": "Hatch your first drone",
         "label": "a good start",
         "longdesc": "",
@@ -213,7 +255,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 0
       },
       {
-        "description": "Create your first nest",
+        "description": "Build your first nest",
         "label": "I wanna be the very nest",
         "longdesc": "",
         "name": "nest1",
@@ -227,7 +269,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED nests",
+        "description": "Build $REQUIRED nests",
         "label": "to hatch them is my real test",
         "longdesc": "",
         "name": "nest2",
@@ -241,7 +283,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED  nests",
+        "description": "Build $REQUIRED nests",
         "label": "final nesting place",
         "longdesc": "",
         "name": "nest3",
@@ -423,7 +465,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first neuroprophet",
+        "description": "Grow your first neuroprophet",
         "label": "1. collect larvae",
         "longdesc": "",
         "name": "prophet1",
@@ -465,7 +507,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first hive neuron",
+        "description": "Grow your first hive neuron",
         "label": "neurogenesis",
         "longdesc": "",
         "name": "goddess1",
@@ -479,7 +521,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED hive neurons",
+        "description": "Grow $REQUIRED hive neurons",
         "label": "new neurons",
         "longdesc": "",
         "name": "goddess2",
@@ -493,7 +535,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED hive neurons",
+        "description": "Grow $REQUIRED hive neurons",
         "label": "neuronerd",
         "longdesc": "",
         "name": "goddess3",
@@ -507,7 +549,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first neural cluster",
+        "description": "Grow your first neural cluster",
         "label": "nucleus",
         "longdesc": "",
         "name": "pantheon1",
@@ -521,7 +563,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED neural clusters",
+        "description": "Grow $REQUIRED neural clusters",
         "label": "ganglion",
         "longdesc": "",
         "name": "pantheon2",
@@ -535,7 +577,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED neural clusters",
+        "description": "Grow $REQUIRED neural clusters",
         "label": "cluster-something",
         "longdesc": "",
         "name": "pantheon3",
@@ -549,7 +591,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first hive network",
+        "description": "Grow your first hive network",
         "label": "arpanet",
         "longdesc": "",
         "name": "pantheon21",
@@ -563,7 +605,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED hive networks",
+        "description": "Grow $REQUIRED hive networks",
         "label": "backpropagation",
         "longdesc": "",
         "name": "pantheon22",
@@ -577,7 +619,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED hive networks",
+        "description": "Grow $REQUIRED hive networks",
         "label": "nydus",
         "longdesc": "",
         "name": "pantheon23",
@@ -591,7 +633,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first lesser hive mind",
+        "description": "Grow your first lesser hive mind",
         "label": "do you mind?",
         "longdesc": "",
         "name": "pantheon31",
@@ -605,7 +647,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED lesser hive minds",
+        "description": "Grow $REQUIRED lesser hive minds",
         "label": "lesser is morer",
         "longdesc": "",
         "name": "pantheon32",
@@ -619,7 +661,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED lesser hive minds",
+        "description": "Grow $REQUIRED lesser hive minds",
         "label": "lord have mercy",
         "longdesc": "",
         "name": "pantheon33",
@@ -633,7 +675,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first hive mind",
+        "description": "Grow your first hive mind",
         "label": "one of us",
         "longdesc": "",
         "name": "pantheon41",
@@ -647,7 +689,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED hive minds",
+        "description": "Grow $REQUIRED hive minds",
         "label": "groupthink",
         "longdesc": "",
         "name": "pantheon42",
@@ -661,7 +703,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED hive minds",
+        "description": "Grow $REQUIRED hive minds",
         "label": "swarm intelligence",
         "longdesc": "",
         "name": "pantheon43",
@@ -675,7 +717,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first arch-mind",
+        "description": "Grow your first arch-mind",
         "label": "ante meridiem",
         "longdesc": "",
         "name": "pantheon51",
@@ -689,7 +731,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED arch-minds",
+        "description": "Grow $REQUIRED arch-minds",
         "label": "archery",
         "longdesc": "",
         "name": "pantheon52",
@@ -703,7 +745,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED arch-minds",
+        "description": "Grow $REQUIRED arch-minds",
         "label": "cerebration time",
         "longdesc": "",
         "name": "pantheon53",
@@ -717,7 +759,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create your first overmind",
+        "description": "Grow your first overmind",
         "label": "awaken, my child",
         "longdesc": "",
         "name": "overmind1",
@@ -731,7 +773,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 5
       },
       {
-        "description": "Create $REQUIRED overminds",
+        "description": "Grow $REQUIRED overminds",
         "label": "how ya like my groove?",
         "longdesc": "",
         "name": "overmind2",
@@ -745,7 +787,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.val": 1
       },
       {
-        "description": "Create $REQUIRED overminds",
+        "description": "Grow $REQUIRED overminds",
         "label": "well done!",
         "longdesc": "",
         "name": "overmind3",
@@ -755,6 +797,216 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "requires.upgradetype": "",
         "requires.val": 1e+32,
         "visible.unittype": "overmind",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow your first overmind II",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind2_1",
+        "points": 10,
+        "requires.event": "",
+        "requires.unittype": "overmind2",
+        "requires.upgradetype": "",
+        "requires.val": 1,
+        "visible.unittype": "overmind",
+        "visible.upgradetype": "",
+        "visible.val": 5
+      },
+      {
+        "description": "Grow $REQUIRED overmind IIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind2_2",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "overmind2",
+        "requires.upgradetype": "",
+        "requires.val": 10000000000000000000,
+        "visible.unittype": "overmind2",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow $REQUIRED overmind IIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind2_3",
+        "points": 30,
+        "requires.event": "",
+        "requires.unittype": "overmind2",
+        "requires.upgradetype": "",
+        "requires.val": 1e+38,
+        "visible.unittype": "overmind2",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow your first overmind III",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind3_1",
+        "points": 10,
+        "requires.event": "",
+        "requires.unittype": "overmind3",
+        "requires.upgradetype": "",
+        "requires.val": 1,
+        "visible.unittype": "overmind2",
+        "visible.upgradetype": "",
+        "visible.val": 5
+      },
+      {
+        "description": "Grow $REQUIRED overmind IIIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind3_2",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "overmind3",
+        "requires.upgradetype": "",
+        "requires.val": 1e+22,
+        "visible.unittype": "overmind3",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow $REQUIRED overmind IIIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind3_3",
+        "points": 30,
+        "requires.event": "",
+        "requires.unittype": "overmind3",
+        "requires.upgradetype": "",
+        "requires.val": 1e+44,
+        "visible.unittype": "overmind3",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow your first overmind IV",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind4_1",
+        "points": 10,
+        "requires.event": "",
+        "requires.unittype": "overmind4",
+        "requires.upgradetype": "",
+        "requires.val": 1,
+        "visible.unittype": "overmind3",
+        "visible.upgradetype": "",
+        "visible.val": 5
+      },
+      {
+        "description": "Grow $REQUIRED overmind IVs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind4_2",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "overmind4",
+        "requires.upgradetype": "",
+        "requires.val": 1e+25,
+        "visible.unittype": "overmind4",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow $REQUIRED overmind IVs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind4_3",
+        "points": 30,
+        "requires.event": "",
+        "requires.unittype": "overmind4",
+        "requires.upgradetype": "",
+        "requires.val": 1e+50,
+        "visible.unittype": "overmind4",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow your first overmind V",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind5_1",
+        "points": 10,
+        "requires.event": "",
+        "requires.unittype": "overmind5",
+        "requires.upgradetype": "",
+        "requires.val": 1,
+        "visible.unittype": "overmind4",
+        "visible.upgradetype": "",
+        "visible.val": 5
+      },
+      {
+        "description": "Grow $REQUIRED overmind Vs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind5_2",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "overmind5",
+        "requires.upgradetype": "",
+        "requires.val": 1e+28,
+        "visible.unittype": "overmind5",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow $REQUIRED overmind Vs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind5_3",
+        "points": 30,
+        "requires.event": "",
+        "requires.unittype": "overmind5",
+        "requires.upgradetype": "",
+        "requires.val": 1e+56,
+        "visible.unittype": "overmind5",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow your first overmind VI",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind6_1",
+        "points": 10,
+        "requires.event": "",
+        "requires.unittype": "overmind6",
+        "requires.upgradetype": "",
+        "requires.val": 1,
+        "visible.unittype": "overmind5",
+        "visible.upgradetype": "",
+        "visible.val": 5
+      },
+      {
+        "description": "Grow $REQUIRED overmind VIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind6_2",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "overmind6",
+        "requires.upgradetype": "",
+        "requires.val": 1e+31,
+        "visible.unittype": "overmind6",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Grow $REQUIRED overmind VIs",
+        "label": "transcendent thought",
+        "longdesc": "",
+        "name": "overmind6_3",
+        "points": 30,
+        "requires.event": "",
+        "requires.unittype": "overmind6",
+        "requires.upgradetype": "",
+        "requires.val": 1e+62,
+        "visible.unittype": "overmind6",
         "visible.upgradetype": "",
         "visible.val": 1
       },
@@ -774,10 +1026,24 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       },
       {
         "description": "Ascend $REQUIRED times",
+        "label": "third time's the charm",
+        "longdesc": "",
+        "name": "ascension11",
+        "points": 20,
+        "requires.event": "",
+        "requires.unittype": "ascension",
+        "requires.upgradetype": "",
+        "requires.val": 3,
+        "visible.unittype": "ascension",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Ascend $REQUIRED times",
         "label": "interplanetary infestation",
         "longdesc": "",
         "name": "ascension2",
-        "points": 20,
+        "points": 30,
         "requires.event": "",
         "requires.unittype": "ascension",
         "requires.upgradetype": "",
@@ -788,10 +1054,24 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       },
       {
         "description": "Ascend $REQUIRED times",
+        "label": "reseterrific",
+        "longdesc": "",
+        "name": "ascension21",
+        "points": 40,
+        "requires.event": "",
+        "requires.unittype": "ascension",
+        "requires.upgradetype": "",
+        "requires.val": 10,
+        "visible.unittype": "ascension",
+        "visible.upgradetype": "",
+        "visible.val": 1
+      },
+      {
+        "description": "Ascend $REQUIRED times",
         "label": "prestigious",
         "longdesc": "",
         "name": "ascension3",
-        "points": 30,
+        "points": 50,
         "requires.event": "",
         "requires.unittype": "ascension",
         "requires.upgradetype": "",
@@ -887,7 +1167,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED swarmlings",
         "label": "adrenal glands",
-        "longdesc": "",
+        "longdesc": "Swarmlings hatched by nexus abilities don't count.",
         "name": "swarmling3",
         "points": 10,
         "requires.event": "",
@@ -929,7 +1209,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED stingers",
         "label": "waxing poetic",
-        "longdesc": "",
+        "longdesc": "Stingers hatched by nexus abilities don't count.",
         "name": "stinger3",
         "points": 10,
         "requires.event": "",
@@ -971,7 +1251,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED arachnomorphs",
         "label": "how do i shot web",
-        "longdesc": "",
+        "longdesc": "Arachnomorphs hatched by nexus abilities don't count.",
         "name": "spider3",
         "points": 10,
         "requires.event": "",
@@ -1013,7 +1293,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED culicimorphs",
         "label": "this achievement sucks",
-        "longdesc": "",
+        "longdesc": "Culicimorphs hatched by nexus abilities don't count.",
         "name": "mosquito3",
         "points": 10,
         "requires.event": "",
@@ -1055,7 +1335,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED locusts",
         "label": "trypophobia",
-        "longdesc": "",
+        "longdesc": "Locusts hatched by nexus abilities don't count.",
         "name": "locust3",
         "points": 10,
         "requires.event": "",
@@ -1097,7 +1377,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED roaches",
         "label": "papa",
-        "longdesc": "",
+        "longdesc": "Roaches hatched by nexus abilities don't count.",
         "name": "roach3",
         "points": 10,
         "requires.event": "",
@@ -1139,7 +1419,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED giant arachnomorphs",
         "label": "and I'm just sitting here",
-        "longdesc": "",
+        "longdesc": "Giant Arachnomorphs hatched by nexus abilities don't count.",
         "name": "giantspider3",
         "points": 10,
         "requires.event": "",
@@ -1181,7 +1461,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED chilopodomorphs",
         "label": "missile command",
-        "longdesc": "",
+        "longdesc": "Chilopodomorphs hatched by nexus abilities don't count.",
         "name": "centipede3",
         "points": 10,
         "requires.event": "",
@@ -1223,7 +1503,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED wasps",
         "label": "kill",
-        "longdesc": "",
+        "longdesc": "Wasps hatched by nexus abilities don't count.",
         "name": "wasp3",
         "points": 10,
         "requires.event": "",
@@ -1265,7 +1545,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED devourers",
         "label": "sometimes they drain energy",
-        "longdesc": "",
+        "longdesc": "Devourers hatched by nexus abilities don't count.",
         "name": "devourer3",
         "points": 10,
         "requires.event": "",
@@ -1307,7 +1587,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       {
         "description": "Hatch $REQUIRED goons",
         "label": "all hallows'",
-        "longdesc": "",
+        "longdesc": "Goons hatched by nexus abilities don't count.",
         "name": "goon3",
         "points": 10,
         "requires.event": "",
@@ -1429,9 +1709,126 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "visible.unittype": "",
         "visible.upgradetype": "",
         "visible.val": ""
+      },
+      {
+        "description": "Ask the right question",
+        "label": "signs point to yes",
+        "longdesc": "The secret's out - read it on /r/swarmsim",
+        "name": "therightquestion",
+        "points": 0,
+        "requires.event": "therightquestion",
+        "requires.unittype": "",
+        "requires.upgradetype": "",
+        "requires.val": "",
+        "visible.unittype": "ascension",
+        "visible.upgradetype": "",
+        "visible.val": 20
       }
     ],
     "name": "achievements"
+  },
+  "mtx": {
+    "column_names": [
+      "name",
+      "label",
+      "description",
+      "pricekreds",
+      "priceusdpaypal",
+      "uses",
+      "pack.unittype",
+      "bulkbonus",
+      "pack.val",
+      "paypalsandboxurl",
+      "paypallegacygithuburl",
+      "paypalswarmsimdotcomurl"
+    ],
+    "elements": [
+      {
+        "bulkbonus": 1,
+        "description": "10,000 crystals",
+        "label": "10,000 crystals",
+        "name": "crystal000",
+        "pack.unittype": "crystal",
+        "pack.val": 10000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VTLR9A5SGD88U",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A4DNJ5VY8MWV8",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=29XGRZEGPPTGQ",
+        "price_kreds": 10,
+        "price_usd_paypal": 99,
+        "uses": 1
+      },
+      {
+        "bulkbonus": 1.1,
+        "description": "55,000 crystals",
+        "label": "55,000 crystals",
+        "name": "crystal001",
+        "pack.unittype": "crystal",
+        "pack.val": 55000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UQYE7GYCB93M4",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H982J7ACEWUUC",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9CY7ETN5WSGAL",
+        "price_kreds": 50,
+        "price_usd_paypal": 499,
+        "uses": 1
+      },
+      {
+        "bulkbonus": 1.2,
+        "description": "120,000 crystals",
+        "label": "120,000 crystals",
+        "name": "crystal002",
+        "pack.unittype": "crystal",
+        "pack.val": 120000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BFP63KZ2SAVWE",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KBAEKDS5JDBKS",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTQ7YNRWUCFPY",
+        "price_kreds": 100,
+        "price_usd_paypal": 999,
+        "uses": 1
+      },
+      {
+        "bulkbonus": 1.3,
+        "description": "260,000 crystals",
+        "label": "260,000 crystals",
+        "name": "crystal003",
+        "pack.unittype": "crystal",
+        "pack.val": 260000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3VLJDNEYEHJ9Y",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YP45TQT6UM2P8",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3ARXXBEL8Z5X4",
+        "price_kreds": 200,
+        "price_usd_paypal": 1999,
+        "uses": 1
+      },
+      {
+        "bulkbonus": 1.4,
+        "description": "700,000 crystals",
+        "label": "700,000 crystals",
+        "name": "crystal004",
+        "pack.unittype": "crystal",
+        "pack.val": 700000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YYFCE3PQ4KY8Y",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QB5KNYZCCEHD4",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J35H9EGN48DPW",
+        "price_kreds": 500,
+        "price_usd_paypal": 4999,
+        "uses": 1
+      },
+      {
+        "bulkbonus": 1.5,
+        "description": "1,500,000 crystals",
+        "label": "1,500,000 crystals",
+        "name": "crystal005",
+        "pack.unittype": "crystal",
+        "pack.val": 1500000,
+        "paypalLegacyGithubUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYA3WRJJRK6LC",
+        "paypalSandboxUrl": "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2G5NLN7SE4L5U",
+        "paypalSwarmsimDotComUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YVHVAE2UW2H86",
+        "price_kreds": 1000,
+        "price_usd_paypal": 9999,
+        "uses": 1
+      }
+    ],
+    "name": "mtx"
   },
   "unittypes": {
     "column_names": [
@@ -1444,10 +1841,12 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
       "column",
       "tab",
       "init",
+      "ascendpreserve",
       "description",
       "lol",
       "disabled",
       "unbuyable",
+      "isbuyhidden",
       "tier",
       "cost.unittype",
       "cost.val",
@@ -1471,6 +1870,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
     ],
     "elements": [
       {
+        "ascendPreserve": "",
         "column": 0,
         "cost.unittype": "",
         "cost.val": "",
@@ -1484,6 +1884,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": 1,
+        "isBuyHidden": "",
         "label": "invisible hatchery",
         "lol": "Stop digging around in the source code, you dirty cheater.",
         "name": "invisiblehatchery",
@@ -1506,6 +1907,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 0,
         "cost.unittype": "",
         "cost.val": "",
@@ -1519,6 +1921,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": 35,
+        "isBuyHidden": "",
         "label": "meat",
         "lol": "Some kingdoms use meat to craft paste or cars. Meat, meat, it can't be beat~",
         "name": "meat",
@@ -1541,6 +1944,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 0,
         "cost.unittype": "cocoon",
         "cost.val": 1,
@@ -1554,6 +1958,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": 10,
+        "isBuyHidden": "",
         "label": "larva",
         "lol": "Why not \"larvas\", English?",
         "name": "larva",
@@ -1576,6 +1981,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 0,
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -1589,6 +1995,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "cocoon",
         "lol": "Enemy COCOON used HARDEN!",
         "name": "cocoon",
@@ -1611,6 +2018,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 0,
         "cost.unittype": "",
         "cost.val": "",
@@ -1624,6 +2032,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "territory",
         "lol": "",
         "name": "territory",
@@ -1646,10 +2055,11 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 0,
-        "cost.unittype": "",
-        "cost.val": "",
-        "description": "Energy is consumed to use special abilities.",
+        "cost.unittype": "crystal",
+        "cost.val": 1,
+        "description": "-",
         "disabled": "",
         "effect.stat": "",
         "effect.type": "",
@@ -1659,8 +2069,9 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "TRUE",
         "label": "energy",
-        "lol": "Coffee is consumed to restore energy.",
+        "lol": "",
         "name": "energy",
         "plural": "energy",
         "prod.unittype": "",
@@ -1672,15 +2083,16 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "showparent": "",
         "tab": "energy",
         "tier": "",
-        "unbuyable": "TRUE",
-        "verb": "",
-        "verbing": "",
-        "verbone": "",
+        "unbuyable": "",
+        "verb": "convert",
+        "verbing": "converting",
+        "verbone": "converts",
         "warnfirst.text": "",
         "warnfirst.unittype": "",
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "energy",
         "cost.val": -1,
@@ -1694,7 +2106,8 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
-        "label": "",
+        "isBuyHidden": "",
+        "label": "respecEnergy",
         "lol": "",
         "name": "respecEnergy",
         "plural": "",
@@ -1716,6 +2129,44 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
+        "column": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "energy bought with microtransactions also permanently increases max energy. Don't wanna worry about hitting the cap.",
+        "disabled": "TRUE",
+        "effect.stat": "capFlat",
+        "effect.type": "addStat",
+        "effect.unittype": "energy",
+        "effect.unittype2": "",
+        "effect.val": 1,
+        "effect.val2": "",
+        "effect.val3": "",
+        "init": "",
+        "isBuyHidden": "",
+        "label": "energy and max energy",
+        "lol": "",
+        "name": "mtxEnergy",
+        "plural": "energy and max energy",
+        "prod.unittype": "",
+        "prod.val": "",
+        "requires.op": "",
+        "requires.unittype": "",
+        "requires.upgradetype": "",
+        "requires.val": "",
+        "showparent": "",
+        "tab": "energy",
+        "tier": "",
+        "unbuyable": "TRUE",
+        "verb": "",
+        "verbing": "",
+        "verbone": "",
+        "warnfirst.text": "",
+        "warnfirst.unittype": "",
+        "warnfirst.val": ""
+      },
+      {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1729,6 +2180,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "nexus",
         "lol": "There was a lot more to magic, as Hairy quickly found out, than waving your antennae and saying a few funny words.",
         "name": "nexus",
@@ -1751,41 +2203,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
-        "column": "",
-        "cost.unittype": "",
-        "cost.val": "",
-        "description": "-",
-        "disabled": "TRUE",
-        "effect.stat": "",
-        "effect.type": "",
-        "effect.unittype": "",
-        "effect.unittype2": "",
-        "effect.val": "",
-        "effect.val2": "",
-        "effect.val3": "",
-        "init": "",
-        "label": "crystal",
-        "lol": "",
-        "name": "crystal",
-        "plural": "crystals",
-        "prod.unittype": "",
-        "prod.val": "",
-        "requires.op": "",
-        "requires.unittype": "nexus",
-        "requires.upgradetype": "",
-        "requires.val": 1,
-        "showparent": "",
-        "tab": "energy",
-        "tier": "",
-        "unbuyable": "TRUE",
-        "verb": "",
-        "verbing": "",
-        "verbone": "",
-        "warnfirst.text": "",
-        "warnfirst.unittype": "",
-        "warnfirst.val": ""
-      },
-      {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1799,6 +2217,44 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
+        "label": "crystal",
+        "lol": "",
+        "name": "crystal",
+        "plural": "crystals",
+        "prod.unittype": "",
+        "prod.val": "",
+        "requires.op": "",
+        "requires.unittype": "meat",
+        "requires.upgradetype": "",
+        "requires.val": 0,
+        "showparent": "",
+        "tab": "energy",
+        "tier": "",
+        "unbuyable": "TRUE",
+        "verb": "",
+        "verbing": "",
+        "verbone": "",
+        "warnfirst.text": "",
+        "warnfirst.unittype": "",
+        "warnfirst.val": ""
+      },
+      {
+        "ascendPreserve": "TRUE",
+        "column": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "-",
+        "disabled": "",
+        "effect.stat": "",
+        "effect.type": "",
+        "effect.unittype": "",
+        "effect.unittype2": "",
+        "effect.val": "",
+        "effect.val2": "",
+        "effect.val3": "",
+        "init": "",
+        "isBuyHidden": "",
         "label": "mutagen",
         "lol": "",
         "name": "mutagen",
@@ -1821,6 +2277,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1834,6 +2291,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutagen",
@@ -1856,6 +2314,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1869,6 +2328,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutagen",
@@ -1891,6 +2351,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1904,6 +2365,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutagen",
@@ -1926,6 +2388,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1939,6 +2402,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "mutagen (inactive)",
         "lol": "Near comatose, no exercise / Don't tag my toe, I'm still alive",
         "name": "premutagen",
@@ -1961,6 +2425,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -1974,6 +2439,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "premutagen",
@@ -1996,6 +2462,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -2009,6 +2476,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "premutagen",
@@ -2031,6 +2499,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -2044,6 +2513,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "premutagen",
@@ -2066,6 +2536,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -2079,6 +2550,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "ascension",
         "lol": "",
         "name": "ascension",
@@ -2101,6 +2573,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -2114,6 +2587,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": 4,
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "freeRespec",
@@ -2136,6 +2610,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 10,
@@ -2149,6 +2624,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "drone",
         "lol": "Not to be confused with probes or mules.",
         "name": "drone",
@@ -2171,6 +2647,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2184,6 +2661,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "drone",
@@ -2206,6 +2684,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 810,
@@ -2219,6 +2698,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "queen",
         "lol": "I want to ride my bicycle / I want to ride my bike / I want to ride my bicycle / I want to ride it where I like",
         "name": "queen",
@@ -2241,6 +2721,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "drone",
         "cost.val": 100,
@@ -2254,6 +2735,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "queen",
@@ -2276,6 +2758,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2289,6 +2772,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "queen",
@@ -2311,6 +2795,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 72900,
@@ -2324,6 +2809,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "nest",
         "lol": "They also have fancy temperature controls.",
         "name": "nest",
@@ -2346,6 +2832,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": 2000
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "queen",
         "cost.val": 1000,
@@ -2359,6 +2846,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "nest",
@@ -2381,6 +2869,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2394,6 +2883,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "nest",
@@ -2416,6 +2906,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 6561000,
@@ -2429,6 +2920,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "greater queen",
         "lol": "Can't think of a name? Pick another creature and slap \"greater\" in front of it!",
         "name": "greaterqueen",
@@ -2451,6 +2943,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": 40000
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "nest",
         "cost.val": 10000,
@@ -2464,6 +2957,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "greaterqueen",
@@ -2486,6 +2980,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2499,6 +2994,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "greaterqueen",
@@ -2521,6 +3017,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 590490000,
@@ -2534,6 +3031,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive",
         "lol": "Serve the hive. Feel the groove. I control the way you move.",
         "name": "hive",
@@ -2556,6 +3054,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": 800000
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "greaterqueen",
         "cost.val": 100000,
@@ -2569,6 +3068,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "hive",
@@ -2591,6 +3091,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2604,6 +3105,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "hive",
@@ -2626,6 +3128,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 53144100000,
@@ -2639,6 +3142,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive queen",
         "lol": "Managers managing managers managing managers.",
         "name": "hivequeen",
@@ -2661,6 +3165,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": 4000000
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "hive",
         "cost.val": 1000000,
@@ -2674,6 +3179,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "hivequeen",
@@ -2696,6 +3202,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2709,6 +3216,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "hivequeen",
@@ -2731,6 +3239,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 4782969000000,
@@ -2744,6 +3253,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive empress",
         "lol": "On her thorax and on her forewing she has this name written: queen of queens and lady of ladies.",
         "name": "empress",
@@ -2766,6 +3276,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "hivequeen",
         "cost.val": 10000000,
@@ -2779,6 +3290,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "empress",
@@ -2801,6 +3313,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2814,6 +3327,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "empress",
@@ -2836,6 +3350,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 430467210000000,
@@ -2849,6 +3364,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "neuroprophet",
         "lol": "Heavens and goddesses and pantheons never really made much sense for a swarm, did they?",
         "name": "prophet",
@@ -2871,6 +3387,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "empress",
         "cost.val": 100000000,
@@ -2884,6 +3401,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "prophet",
@@ -2906,6 +3424,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -2919,6 +3438,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "prophet",
@@ -2941,6 +3461,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 38742000000000000,
@@ -2954,6 +3475,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive neuron",
         "lol": "Thanks, Neuronerd. Miss you.",
         "name": "goddess",
@@ -2976,6 +3498,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "prophet",
         "cost.val": 1000000000,
@@ -2989,6 +3512,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "goddess",
@@ -3011,6 +3535,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3024,6 +3549,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "goddess",
@@ -3046,6 +3572,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 3486780000000000000,
@@ -3059,6 +3586,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "neural cluster",
         "lol": "Their trick for avoiding cluster headaches is to avoid having a head.",
         "name": "pantheon",
@@ -3081,6 +3609,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "goddess",
         "cost.val": 10000000000,
@@ -3094,6 +3623,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon",
@@ -3116,6 +3646,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3129,6 +3660,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon",
@@ -3151,6 +3683,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 313811000000000000000,
@@ -3164,6 +3697,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive network",
         "lol": "Networks also allow them to play games and watch videos of ...uh, cats.",
         "name": "pantheon2",
@@ -3186,6 +3720,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "pantheon",
         "cost.val": 1000000000000,
@@ -3199,6 +3734,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon2",
@@ -3221,6 +3757,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3234,6 +3771,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon2",
@@ -3256,6 +3794,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 2.8243e+22,
@@ -3269,6 +3808,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "lesser hive mind",
         "lol": "Hey, \"lesser\" works just as well as \"greater\" for naming things!",
         "name": "pantheon3",
@@ -3291,6 +3831,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "pantheon2",
         "cost.val": 100000000000000,
@@ -3304,6 +3845,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon3",
@@ -3326,6 +3868,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3339,6 +3882,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon3",
@@ -3361,6 +3905,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 2.54187e+24,
@@ -3374,6 +3919,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "hive mind",
         "lol": "Do hive minds have hives on their minds? Sounds painful.",
         "name": "pantheon4",
@@ -3396,6 +3942,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "pantheon3",
         "cost.val": 10000000000000000,
@@ -3409,6 +3956,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon4",
@@ -3431,6 +3979,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3444,6 +3993,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon4",
@@ -3466,6 +4016,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 2.28768e+26,
@@ -3479,6 +4030,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "arch-mind",
         "lol": "By your powers combined...",
         "name": "pantheon5",
@@ -3501,6 +4053,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "pantheon4",
         "cost.val": 10000000000000000000,
@@ -3514,6 +4067,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon5",
@@ -3536,6 +4090,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3549,6 +4104,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "pantheon5",
@@ -3571,6 +4127,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 2.05891e+28,
@@ -3584,6 +4141,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind",
         "lol": "SO much cooler than that infested human, even if she did win.",
         "name": "overmind",
@@ -3606,6 +4164,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "pantheon5",
         "cost.val": 1e+23,
@@ -3619,6 +4178,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind",
@@ -3641,6 +4201,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3654,6 +4215,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind",
@@ -3676,6 +4238,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 1.85302e+30,
@@ -3689,6 +4252,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind II",
         "lol": "And here's where I ran out of ideas.",
         "name": "overmind2",
@@ -3711,6 +4275,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "overmind",
         "cost.val": 1e+28,
@@ -3724,6 +4289,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind2",
@@ -3746,6 +4312,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3759,6 +4326,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind2",
@@ -3781,6 +4349,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 1.66772e+32,
@@ -3794,6 +4363,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind III",
         "lol": "And here's where I ran out of ideas.",
         "name": "overmind3",
@@ -3816,6 +4386,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "overmind2",
         "cost.val": 1e+34,
@@ -3829,6 +4400,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind3",
@@ -3851,6 +4423,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3864,6 +4437,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind3",
@@ -3886,6 +4460,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 1.50095e+34,
@@ -3899,6 +4474,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind IV",
         "lol": "And here's where I ran out of ideas.",
         "name": "overmind4",
@@ -3921,6 +4497,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "overmind3",
         "cost.val": 1e+41,
@@ -3934,6 +4511,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind4",
@@ -3956,6 +4534,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -3969,6 +4548,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind4",
@@ -3991,6 +4571,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 1.35085e+36,
@@ -4004,6 +4585,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind V",
         "lol": "And here's where I ran out of ideas.",
         "name": "overmind5",
@@ -4026,6 +4608,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "overmind4",
         "cost.val": 1e+49,
@@ -4039,6 +4622,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind5",
@@ -4061,6 +4645,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4074,6 +4659,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind5",
@@ -4096,6 +4682,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 1,
         "cost.unittype": "meat",
         "cost.val": 1.21577e+38,
@@ -4109,6 +4696,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "overmind VI",
         "lol": "And here's where I ran out of ideas.",
         "name": "overmind6",
@@ -4131,6 +4719,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "overmind5",
         "cost.val": 1e+58,
@@ -4144,6 +4733,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind6",
@@ -4166,6 +4756,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4179,6 +4770,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "overmind6",
@@ -4201,6 +4793,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 750,
@@ -4214,6 +4807,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "swarmling",
         "lol": "Groups of six at the wrong time are pretty vicious too.",
         "name": "swarmling",
@@ -4236,6 +4830,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4249,6 +4844,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "swarmling",
@@ -4271,6 +4867,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 337500,
@@ -4284,6 +4881,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "stinger",
         "lol": "Reasonably smart critters - they consistently earn a 3.0 GPA.",
         "name": "stinger",
@@ -4306,6 +4904,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4319,6 +4918,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "stinger",
@@ -4341,6 +4941,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 151875000,
@@ -4354,6 +4955,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "arachnomorph",
         "lol": "Four legs good. Eight legs better.",
         "name": "spider",
@@ -4376,6 +4978,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4389,6 +4992,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "spider",
@@ -4411,6 +5015,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 68343750000,
@@ -4424,6 +5029,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "culicimorph",
         "lol": "These guys really suck.",
         "name": "mosquito",
@@ -4446,6 +5052,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4459,6 +5066,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mosquito",
@@ -4481,6 +5089,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 30754687500000,
@@ -4494,6 +5103,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "locust",
         "lol": "Preceded by fiery hail, followed by darkness.",
         "name": "locust",
@@ -4516,6 +5126,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4529,6 +5140,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "locust",
@@ -4551,6 +5163,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 13839600000000000,
@@ -4564,6 +5177,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "roach",
         "lol": "ROOSTERS.",
         "name": "roach",
@@ -4586,6 +5200,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4599,6 +5214,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "roach",
@@ -4621,6 +5237,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 6227820000000000000,
@@ -4634,6 +5251,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "giant arachnomorph",
         "lol": "Rest assured that you do not swallow eight of these per year while sleeping.",
         "name": "giantspider",
@@ -4656,6 +5274,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4669,6 +5288,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "giantspider",
@@ -4691,6 +5311,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 2.80252e+21,
@@ -4704,6 +5325,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "chilopodomorph",
         "lol": "Hi Mom!",
         "name": "centipede",
@@ -4726,6 +5348,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4739,6 +5362,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "centipede",
@@ -4761,6 +5385,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 1.26113e+24,
@@ -4774,6 +5399,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "wasp",
         "lol": "I can't beelieve you're actually reading this.",
         "name": "wasp",
@@ -4796,6 +5422,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4809,6 +5436,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "wasp",
@@ -4831,6 +5459,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 5.6751e+26,
@@ -4844,6 +5473,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "devourer",
         "lol": "Extra fun in hardcore leagues and fractured maps.",
         "name": "devourer",
@@ -4866,6 +5496,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4879,6 +5510,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "devourer",
@@ -4901,6 +5533,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": 2,
         "cost.unittype": "meat",
         "cost.val": 2.5538e+29,
@@ -4914,6 +5547,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "goon",
         "lol": "They like spreadsheets too.",
         "name": "goon",
@@ -4936,6 +5570,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -4949,6 +5584,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "goon",
@@ -4971,6 +5607,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "energy",
         "cost.val": 10,
@@ -4984,6 +5621,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.001,
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "nightbug",
         "lol": "Often seen in the company of an ice fairy, a singing sparrow, and a ball of darkness.",
         "name": "nightbug",
@@ -5006,6 +5644,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -5019,6 +5658,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "nightbug",
@@ -5041,6 +5681,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "energy",
         "cost.val": 10,
@@ -5054,6 +5695,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.001,
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "lepidoptera",
         "lol": "on the one ton temple bell / a moon-moth, folded into sleep, / sits still.",
         "name": "moth",
@@ -5076,6 +5718,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -5089,6 +5732,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "moth",
@@ -5111,6 +5755,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "energy",
         "cost.val": 100,
@@ -5124,6 +5769,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.001,
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "bat",
         "lol": "\"Bats aren't bugs!!\" \"Look, who's giving this report? You chowderheads... or me?!\"",
         "name": "bat",
@@ -5146,6 +5792,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "larva",
         "cost.val": 1,
@@ -5159,6 +5806,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "bat",
@@ -5181,6 +5829,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5194,6 +5843,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 1,
         "init": "",
+        "isBuyHidden": "",
         "label": "hatchery mutation",
         "lol": "",
         "name": "mutanthatchery",
@@ -5216,6 +5866,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5229,6 +5880,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 1,
         "init": "",
+        "isBuyHidden": "",
         "label": "bat mutation",
         "lol": "",
         "name": "mutantbat",
@@ -5251,6 +5903,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5262,8 +5915,9 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.unittype2": "",
         "effect.val": 1,
         "effect.val2": 10,
-        "effect.val3": 1.5,
+        "effect.val3": 1.8,
         "init": "",
+        "isBuyHidden": "",
         "label": "clone mutation",
         "lol": "",
         "name": "mutantclone",
@@ -5286,6 +5940,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5299,6 +5954,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 2,
         "init": "",
+        "isBuyHidden": "",
         "label": "warp mutation",
         "lol": "",
         "name": "mutantswarmwarp",
@@ -5321,6 +5977,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5334,6 +5991,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 3,
         "init": "",
+        "isBuyHidden": "",
         "label": "rush mutation",
         "lol": "",
         "name": "mutantrush",
@@ -5356,6 +6014,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5369,6 +6028,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 13,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantrush",
@@ -5391,6 +6051,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5404,6 +6065,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 13,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantrush",
@@ -5426,6 +6088,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5439,6 +6102,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.5,
         "init": "",
+        "isBuyHidden": "",
         "label": "meta-mutation",
         "lol": "",
         "name": "mutanteach",
@@ -5461,6 +6125,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5474,6 +6139,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutanteach",
@@ -5496,6 +6162,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5509,6 +6176,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutanteach",
@@ -5531,6 +6199,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5540,10 +6209,11 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.type": "asympStat",
         "effect.unittype": "invisiblehatchery",
         "effect.unittype2": "",
-        "effect.val": 3,
+        "effect.val": 5,
         "effect.val2": 0.001,
         "effect.val3": 5,
         "init": "",
+        "isBuyHidden": "",
         "label": "mutation frequency",
         "lol": "Savescumming won't work, by the way.",
         "name": "mutantfreq",
@@ -5566,6 +6236,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5579,6 +6250,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": "",
         "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantfreq",
@@ -5601,6 +6273,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -5614,6 +6287,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.0005,
         "effect.val3": 5,
         "init": "",
+        "isBuyHidden": "",
         "label": "lepidoptera mutation",
         "lol": "",
         "name": "mutantnexus",
@@ -5636,6 +6310,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5649,6 +6324,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.0005,
         "effect.val3": 5,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantnexus",
@@ -5671,6 +6347,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -5684,6 +6361,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 0.0005,
         "effect.val3": 5,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantnexus",
@@ -5706,19 +6384,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
         "description": "-",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "swarmling",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "territory mutation",
         "lol": "",
         "name": "mutantarmy",
@@ -5741,19 +6421,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "stinger",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5776,19 +6458,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "spider",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5811,19 +6495,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "mosquito",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5846,19 +6532,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "locust",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5881,19 +6569,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "roach",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5916,19 +6606,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "giantspider",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5951,19 +6643,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "centipede",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -5986,19 +6680,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "wasp",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -6021,19 +6717,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "devourer",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -6056,19 +6754,21 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
         "description": "",
         "disabled": "",
         "effect.stat": "prod",
-        "effect.type": "logStat",
+        "effect.type": "expStat",
         "effect.unittype": "goon",
         "effect.unittype2": "",
-        "effect.val": 1,
-        "effect.val2": 10,
-        "effect.val3": 5,
+        "effect.val": 0.2,
+        "effect.val2": 0.001,
+        "effect.val3": "",
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantarmy",
@@ -6091,6 +6791,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "TRUE",
         "column": "",
         "cost.unittype": "mutagen",
         "cost.val": 1,
@@ -6104,6 +6805,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.48,
         "init": "",
+        "isBuyHidden": "",
         "label": "meat mutation",
         "lol": "",
         "name": "mutantmeat",
@@ -6126,6 +6828,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6139,6 +6842,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.408,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6161,6 +6865,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6174,6 +6879,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.3468,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6196,6 +6902,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6209,6 +6916,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.29478,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6231,6 +6939,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6244,6 +6953,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.250563,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6266,6 +6976,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6279,6 +6990,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.21297855,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6301,6 +7013,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6314,6 +7027,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.1810317675,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6336,6 +7050,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6349,6 +7064,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.1538770024,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6371,6 +7087,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6384,6 +7101,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.130795452,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6406,6 +7124,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6419,6 +7138,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.1111761342,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6441,6 +7161,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6454,6 +7175,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.09449971408,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6476,6 +7198,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6489,6 +7212,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.08032475697,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6511,6 +7235,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6524,6 +7249,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.06827604343,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6546,6 +7272,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6559,6 +7286,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.05803463691,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6581,6 +7309,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6594,6 +7323,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.04932944137,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6616,6 +7346,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6629,6 +7360,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.04193002517,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6651,6 +7383,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6664,6 +7397,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.03564052139,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6686,6 +7420,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6699,6 +7434,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.03029444318,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6721,6 +7457,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6734,6 +7471,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.02575027671,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6756,6 +7494,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "warnfirst.val": ""
       },
       {
+        "ascendPreserve": "",
         "column": "",
         "cost.unittype": "",
         "cost.val": "",
@@ -6769,6 +7508,7 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.val2": 10,
         "effect.val3": 0.0218877352,
         "init": "",
+        "isBuyHidden": "",
         "label": "",
         "lol": "",
         "name": "mutantmeat",
@@ -6859,6 +7599,27 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "unittype": ""
       },
       {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "addUnitTimed",
+        "effect.unittype": "crystal",
+        "effect.unittype2": "energy",
+        "effect.upgradetype": "",
+        "effect.val": 500,
+        "effect.val2": 1800,
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "hatchery",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
         "class": "upgrade",
         "cost.factor": 2.45,
         "cost.unittype": "territory",
@@ -6892,6 +7653,27 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "effect.upgradetype": "",
         "effect.val": 1.12,
         "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "expansion",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "addUnitTimed",
+        "effect.unittype": "crystal",
+        "effect.unittype2": "energy",
+        "effect.upgradetype": "",
+        "effect.val": 500,
+        "effect.val2": 1800,
         "label": "",
         "lol": "",
         "maxlevel": "",
@@ -10298,6 +11080,237 @@ angular.module('swarmSpreadsheetPreload').value('spreadsheetPreload-v0.2', {
         "lol": "",
         "maxlevel": "",
         "name": "mutatemeat",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "ability",
+        "cost.factor": 1,
+        "cost.unittype": "energy",
+        "cost.val": 2500,
+        "description": "-",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "swarmling",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "house of mirrors",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "nexus",
+        "requires.val": 5,
+        "unittype": "energy"
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "stinger",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "spider",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "mosquito",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "locust",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "roach",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "giantspider",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "centipede",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "wasp",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "devourer",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
+        "requires.unittype": "",
+        "requires.val": "",
+        "unittype": ""
+      },
+      {
+        "class": "",
+        "cost.factor": "",
+        "cost.unittype": "",
+        "cost.val": "",
+        "description": "",
+        "effect.stat": "",
+        "effect.type": "compoundUnit",
+        "effect.unittype": "goon",
+        "effect.unittype2": "",
+        "effect.upgradetype": "",
+        "effect.val": 2,
+        "effect.val2": "",
+        "label": "",
+        "lol": "",
+        "maxlevel": "",
+        "name": "clonearmy",
         "requires.unittype": "",
         "requires.val": "",
         "unittype": ""

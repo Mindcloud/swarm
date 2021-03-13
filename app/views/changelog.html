@@ -1,6 +1,6 @@
 <tabs></tabs>
 <h1>Patch Notes</h1>
-<p>See the <a analytics-on analytics-category="outbound" analytics-event="click" analytics-label="source code repository" target="_blank" href="https://github.com/erosson/swarm">source code repository</a> for a more thorough, but less readable, change history.
+<p>Swarm Simulator is open source. See the <a analytics-on analytics-category="outbound" analytics-event="click" analytics-label="source code repository" target="_blank" href="https://github.com/erosson/swarm">source code repository</a> for a more thorough, but less readable, change history.
 {{changestats.headers.length|number}} updates released since {{changestats.firstrelease.date.format('YYYY/MM/DD')}}.</p>
 <hr>
 <div ng-if="false && env.isDebugEnabled" class="well">
@@ -20,17 +20,167 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" data-target="#changelog11x" href="javascript:">
+          Version 1.1.x
+        </a>
+      </h4>
+    </div>
+    <div id="changelog11x" class="panel-collapse collapse in">
+<div class="panel-body">
+  <h4>1.1.13<span>2019/07/21</span></h4>
+  <ul>
+    <li>Added a button to export your save to the clipboard with one click.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.12<span>2019/06/12</span></h4>
+  <ul>
+    <li>Some invisible backend changes.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4 title="needs more ones">1.1.11<span>2018/06/07</span></h4>
+  <ul>
+    <li>Tutorial text should once again appear reliably.</li>
+    <li>Crystal purchases from www.swarmsim.com no longer redirect you to the old website.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.10<span>2018/06/05</span></h4>
+  <ul>
+    <li>Soon, swarmsim.github.io will begin encouraging players to <a target="_blank" href="https://www.reddit.com/r/swarmsim/comments/8oik0y/swarmsimgithubio_is_moving_to_wwwswarmsimcom/">move to www.swarmsim.com</a>. This will be visible in a day or two. (Kongregate is unchanged.)</li>
+    <li>Some small bugfixes for screen readers.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.9<span>2018/06/04</span></h4>
+  <ul>
+  <!-- <li>The swarmsim.github.io version strongly encourages you to move to www.swarmsim.com. (Kongregate is unchanged.)</li> -->
+    <li>The game's now playable on www.swarmsim.com. <a target="_blank" href="https://www.reddit.com/r/swarmsim/comments/8oik0y/swarmsimgithubio_is_moving_to_wwwswarmsimcom/">In the near future, swarmsim.github.io will be moving there</a>. (Kongregate is unchanged.)</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4><s>1.1.8<span><s>2018/06/04</s></span></s></h4>
+</div>
+<div class="panel-body">
+  <h4>1.1.7<span>2018/05/27</span></h4>
+  <ul>
+    <li>The "delete online saved data" button in the options screen now asks for confirmation first.</li>
+    <li>Mousing over an input field when buying units lists all possible formats. This previously worked; fixed a bug that broke it.</li>
+    <li>Google Analytics now anonymizes your IP address.</li>
+    <li>Removed the contact-the-developer form, in favor of an email address.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.6<span>2017/06/19</span></h4>
+  <ul>
+    <li>More icon sizes for mobile home screens.</li>
+    <small><li title="Achievement shenanigans are done now, but check /r/swarmsim and /r/warswarms for a Big Announcement.">Secrets.</li></small>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.5<span>2017/06/13</span></h4>
+  <ul>
+    <li>Respec buttons on the mutagen page are disabled when not available. Previously, they looked disabled but still worked in some circumstances.</li>
+    <small><li title="I admit it's tricky, but one of you will solve it. I believe in you.">Secrets.</li></small>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.4<span>2017/06/09</span></h4>
+  <ul>
+    <li>Kongregate online save auto-exporting should now work correctly.</li>
+    <li>Kongregate no longer tries to export online saves to an old/unused save server.</li>
+    <li>The 'more...' menu should no longer scroll small screens to the right.</li>
+    <li>"Buy all/cheapest 1 upgrade" instead of "upgrades". Thanks <a target="_blank" href="https://github.com/swarmsim/swarm/pull/709">Allen-B1</a>!</li>
+    <s><li title="aka: added a service worker with sw-precache. Take 2: now with less catastrophic failure.">The game should now load faster in modern browsers.</li></s>
+    <small><li title="Wouldn't you like to know?">Secrets.</li></small>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.3<span>2017/06/02</span></h4>
+  <ul>
+    <li title="Implemented Paypal IPN. PDT, our previous method, still runs for faster notifications when possible; IPN is more reliable.">Paypal crystal purchases are now delivered more reliably. (Kongregate payments have been working reliably; no changes necessary.)</li>
+    <li title="Shame on me for not getting this one right on release.">Problems when purchasing crystals should now be reported more clearly.</li>
+    <li>Updates to the contact-the-developer page.</li>
+    <li><a target="_blank" href="/repair">Is your Swarm Simulator browser tab reloading endlessly?</a></li>
+  </ul>
+</div>
+<div class="panel-body">
+  <s><h4>1.1.2<span>2017/05/31</span></h4></s>
+</div>
+<div class="panel-body">
+  <h4>1.1.1<span>2017/05/29</span></h4>
+  <ul>
+    <li>Keyboard shortcuts (press shift+?) are now visible with dark themes like Slate.</li>
+    <li>Small change to ascend-count wording on the mutation screen. Thanks <a href="https://github.com/swarmsim/swarm/pull/680">ghmeier</a>!</li>
+    <li title="aka: added a service worker with sw-precache"><s>The game should now load faster on modern browsers. It might work offline, too - try it out.</s></li>
+    <li>Install-to-homescreen for desktop and mobile (but not Kongregate). Thanks <a href="https://github.com/swarmsim/swarm/pull/707">Allen-B1</a>!</li>
+    <li title="There is no cat level.">Crystals now have an associated kitten.</li>
+  </ul>
+</div>
+<div class="panel-body">
+  <h4>1.1.0<span>2017/05/27</span></h4>
+  <ul>
+    <li>By popular demand, mutation frequency now has a maximum of 100%, up from 60%.</li>
+    <li>Added a new ability, <b>House of Mirrors</b>: duplicates all of your territory-producing units once. Unlike Clone Larvae, this ability has no cap.</li>
+    <li>Territory mutation scales better at higher levels. It's now root-based instead of log-based.</li>
+    <li>Added keyboard shortcuts throughout the game. Press '?' for a list of shortcuts.</li>
+    <li>Added some new achievements.</li>
+    <li>Added <b>Crystals</b> to the game. Found in the energy tab, they give you energy instantly and help support the developer.</li>
+    <li>Clone Mutation has been slightly buffed.</li>
+    <li>Fixed buy-dropdown scrolling on the unit list page.</li>
+    <li>System clock errors have been removed. Have fun.</li>
+  </ul>
+</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" data-target="#changelog10x" href="javascript:">
           Version 1.0.x
         </a>
       </h4>
     </div>
-    <div id="changelog10x" class="panel-collapse collapse in">
+    <div id="changelog10x" class="panel-collapse collapse">
       <div class="panel-body">
-<h4><a style="text-decoration:none" href="https://www.youtube.com/watch?v=Y6ljFaKRTrI" target="_blank" title="So I'm glad I got burned / Think of all the things we learned">1.0.60</a><span>2016/01/18</span></h4>
+<h4>1.0.66<span>2017/02/08</span></h4>
 <ul>
-  <li>Some invisible backend changes.</li>
+  <li>Online saves for Kongregate players are now stored on a different server (PlayFab). Your saved data should still be there; make sure no browser extensions block <b>https://7487.playfabapi.com</b>. (Non-Kongregate players: nothing's changed for you.)</li>
 </ul>
+<h4>1.0.65<span>2017/01/19</span></h4>
+<ul>
+  <li>Fixed a bug where scientific-e number formatting broke the achievements screen.</li>
+</ul>
+<h4>1.0.64<span>2017/01/17</span></h4>
+<ul>
+  <li>Fixed a bug that broke FPS settings below 1.</li>
+  <li>Fixed a bug that introduced needlessly precise achievement number formatting.</li>
+</ul>
+<h4>1.0.63<span>2017/01/16</span></h4>
+<ul>
+  <li>Fixed some bugs with how energy is displayed, introduced in the previous release.</li>
+</ul>
+<h4>1.0.62<span>2017/01/15</span></h4>
+<ul>
+  <li title="requestAnimationFrame()">Added an "automatic" FPS setting to the options screen. When Swarm Simulator's in a background browser window/tab, automatic FPS uses less of your computer's resources. It's the default if you've never changed your FPS.</li>
+  <li>Some invisible backend changes.</li>
+  <li>Programmers: you can now use <a target="_blank" href="https://github.com/erosson/swarm-numberformat">Swarm Simulator's number formatting</a> in your own projects.</li>
+</ul>
+<h4>1.0.61<span>2017/01/11</span></h4>
+<ul>
+  <li>Fixed a bug that sometimes hid all upgrade levels.</li>
+  <li>Added a note about upgrade notification dropdowns to 'show advanced unit data'.</li>
+</ul>
+<h4><a style="text-decoration:none" href="https://www.youtube.com/watch?v=Y6ljFaKRTrI" target="_blank" title="So I'm glad I got burned [out] / Think of all the things we learned">1.0.60</a><span>2017/01/10</span></h4>
+<ul>
+  <li>Added PlayFab-based online saves. Removed Dropbox online saves, which haven't worked for months. (Kongregate players: nothing has changed for you yet.)</li>
+  <li title="?forcefools=[on|after|off]">A certain one-time event now happens every year.</li>
+  <li>Upgrade notification dropdowns are now hidden by default; they confused some newer players. "Show advanced unit data" in the options screen reveals them.</li>
+  <li>Simplified the <a href="/#/contact">developer contact page</a>.</li>
+  <li>Lots of invisible backend changes.</li>
+</ul>
+<hr>
 <h4>1.0.59<span>2015/07/30</span></h4>
 <ul>
   <li>Fixed rounding errors when buying <code>@n</code> units. It should now buy that many or slightly more, but never less.</li>

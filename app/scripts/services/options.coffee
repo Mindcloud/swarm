@@ -41,6 +41,12 @@ angular.module('swarmApp').factory 'Options', ($log, util, env, game, $location)
   reset: (field) ->
     delete @session.state.options[field]
 
+  fpsAuto: (enabled) ->
+    @maybeSet 'fpsAuto', enabled
+    # fpsAuto defaults to true if neither fps or fpsAuto are explicitly set
+    # fpsAuto is false if fps-only is explicitly set
+    @get 'fpsAuto', !(@get('fps')?)
+
   fps: (val) ->
     @maybeSet 'fps', val
     Math.min 60, Math.max 0.0001, @get 'fps', 10
@@ -118,7 +124,7 @@ angular.module('swarmApp').factory 'Options', ($log, util, env, game, $location)
         #url: "//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/#{name}/bootstrap.min.css" # why do people block the cdn srsly
         url: "bower_components/bootswatch/#{name}/bootstrap.min.css"
         credit: "http://bootswatch.com/#{name}/"
-    ret.byName = _.indexBy ret.list, 'name'
+    ret.byName = _.keyBy ret.list, 'name'
     return ret
 
   theme: (name) ->
@@ -177,9 +183,12 @@ angular.module('swarmApp').factory 'Options', ($log, util, env, game, $location)
     # this means it starts at the wrong time for non-americans, whom we have lots of. oh well, a consistent start is more important; sorry folks.
     # start a few hours early, between 3/31 21:00 PST (00:00 EST) and 4/1 00:00 PST
     # -07:00 (not -08:00) because daylight savings
-    if now.isBetween moment.parseZone('2015-03-31T21:00:00-07:00'), moment.parseZone('2015-04-02T00:00:00-07:00')
+    #year = 2015
+    # Sadly, I won't be writing april fools events every year after all. Just make this one run every year.
+    year = new Date().getFullYear()
+    if now.isBetween moment.parseZone(year+'-03-31T21:00:00-07:00'), moment.parseZone(year+'-04-02T00:00:00-07:00')
       return 'on'
-    if now.isBetween moment.parseZone('2015-04-02T00:00:00-07:00'), moment.parseZone('2015-04-04T00:00:00-07:00')
+    if now.isBetween moment.parseZone(year+'-04-02T00:00:00-07:00'), moment.parseZone(year+'-04-04T00:00:00-07:00')
       return 'after'
     return 'off'
   isAprilFoolsTheme: (enabled) ->

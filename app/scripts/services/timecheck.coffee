@@ -62,12 +62,15 @@ angular.module('swarmApp').factory 'TimeChecker', ($rootScope, $http, $q, timech
     return Math.abs(diff) > @threshold.as 'hours'
 
   enforceNetTime: ->
-    @isNetTimeInvalid().then (invalid) =>
-      if invalid
-        # they're cheating, no errors
-        $rootScope.$emit 'timecheckFailed'
-        #game.reset() # not confident enough to do this yet, but we can disable the ui until analytics tells us more.
-      return invalid
+    @isNetTimeInvalid().then(
+      (invalid) =>
+        if invalid
+          # they're cheating, no errors
+          $rootScope.$emit 'timecheckFailed'
+          #game.reset() # not confident enough to do this yet, but we can disable the ui until analytics tells us more.
+        return invalid
+      =>
+    )
   
 #angular.module('swarmApp').value 'timecheckUrl', 'http://json-time.appspot.com/time.json?callback=JSON_CALLBACK'
 #angular.module('swarmApp').value 'timecheckUrl', '/'
@@ -84,9 +87,12 @@ angular.module('swarmApp').factory 'VersionChecker', (env, util, $log) -> class 
     # max version in any one chunk
     @_MAX = 100000
   check: (remote) ->
-    if (env.isAppcacheEnabled and window.appCacheNanny.hasUpdate()) or @compare(@version, remote) < 0 #local < remote
+    if @compare(@version, remote) < 0 #local < remote
       $log.debug 'newer version found on server! reloading.', {local:@version, remote:remote}
-      window.location.reload()
+      # 30 second wait before reload. Extra failsafe against the
+      # almost-disastrous reload-before-updating-service-worker bug of
+      # v1.1.1.
+      window.setTimeout((-> window.location.reload()), 30 * 1000)
   compare: (a, b) ->
     return @normalize(a) - @normalize(b)
   normalize: (version) ->

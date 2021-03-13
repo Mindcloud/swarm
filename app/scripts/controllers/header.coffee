@@ -16,23 +16,44 @@ versioncheck, analytics, statistics, achievementslistener, favico
   $scope.version = version
   $scope.session = session
 
+  intervalMillis = 1000 * 60 * 30
+  ## Service worker update-checks are broken.
+  #if 'serviceWorker' in navigator
+  #  $log.debug 'service workers supported, using them for update-checks'
+  #  # this should match the path in index.html
+  #  navigator.servceWorker.register('/service-worker.js').then registration ->
+  #    registration.addEventListener 'onupdatefound', ->
+  #      $log.debug 'sw: update found'
+  #      installer = registration.installing
+  #      installer.addEventListener 'onstatechange', ->
+  #        if installer.state == 'installed'
+  #          $log.debug 'sw: update installed'
+  #          # 30 second wait before reload. Extra failsafe against the
+  #          # almost-disastrous reload-before-updating-service-worker bug of
+  #          # v1.1.1. This shouldn't be necessary to avoid that (this time we wait to load service-worker.js above), but it makes me feel better.
+  #          window.setTimeout((-> window.location.reload()), 30 * 1000)
+  #    $interval (-> registration.update()), intervalMillis
+  #    registration.update()
+  #else
+  # This isn't anti-cheat anymore. Instead, it's legacy version-updates.
   do enforce = ->
     timecheck.enforceNetTime().then(
       (invalid) ->
         $log.debug 'net time check successful', invalid
         $scope.netTimeInvalid = invalid
-        if invalid
-          $log.debug 'cheater', invalid
-          # Replacing ng-view (via .viewwrap) disables navigation to other pages.
-          # This is hideous technique and you, reader, should not copy it.
-          $('.viewwrap').before '<div><p class="cheater">There is a problem with your system clock.</p><p>If you don\'t know why you\'re seeing this, <a target="_blank" href=\"http://www.reddit.com/r/swarmsim\">ask about it here</a>.</p></div>'
-          $('.viewwrap').css({display:'none'})
-          $('.footer').css({display:'none'})
-          $interval.cancel enforceInterval
+        # We're no longer enforcing this.
+        #if invalid
+        #  $log.debug 'cheater', invalid
+        #  # Replacing ng-view (via .viewwrap) disables navigation to other pages.
+        #  # This is hideous technique and you, reader, should not copy it.
+        #  $('.viewwrap').before '<div><p class="cheater">There is a problem with your system clock.</p><p>If you don\'t know why you\'re seeing this, <a target="_blank" href=\"http://www.reddit.com/r/swarmsim\">ask about it here</a>.</p></div>'
+        #  $('.viewwrap').css({display:'none'})
+        #  $('.footer').css({display:'none'})
+        #  $interval.cancel enforceInterval
       ->
         $log.warn 'failed to check net time'
       )
-  enforceInterval = $interval enforce, 1000 * 60 * 30
+  enforceInterval = $interval enforce, intervalMillis
 
   $scope.konami = new Konami ->
     $scope.$emit 'konami'
@@ -62,7 +83,7 @@ angular.module('swarmApp').factory 'pageTheme', ($log, options) -> return ($scop
       $scope.themeExtraEl.html css
       $log.debug 'extratheming', $scope.themeExtraEl, css
 
-angular.module('swarmApp').factory 'kongregateScrolling', ($log, kongregate, kongregateS3Syncer, options) -> return ($scope) ->
+angular.module('swarmApp').factory 'kongregateScrolling', ($log, kongregate, options) -> return ($scope) ->
   $scope.options = options
   if !kongregate.isKongregate()
     return
@@ -88,11 +109,11 @@ angular.module('swarmApp').factory 'kongregateScrolling', ($log, kongregate, kon
   $scope.onRender = ->
     kongregate.onResize()
 
-angular.module('swarmApp').factory 'remoteSaveInit', ($log, kongregate, kongregateS3Syncer, dropboxSyncer, options) -> return ($scope) ->
+angular.module('swarmApp').factory 'remoteSaveInit', ($log, kongregate, kongregatePlayfabSyncer, wwwPlayfabSyncer, options) -> return ($scope) ->
   $scope.$watch 'options.autopush()', (newval, oldval) =>
-    for syncer in [kongregateS3Syncer, dropboxSyncer] then do (syncer) =>
+    for syncer in [kongregatePlayfabSyncer, wwwPlayfabSyncer] then do (syncer) =>
       $log.debug 'autopush trying to setup', syncer.constructor.name
-      if syncer.isVisible()
+      if syncer.isVisible() or syncer.isActive?()
         $log.debug 'autopush visible', syncer.constructor.name
         if syncer.isInit()
           $log.debug 'autopush setup', syncer.constructor.name

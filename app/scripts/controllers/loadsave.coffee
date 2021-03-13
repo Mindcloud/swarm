@@ -66,15 +66,23 @@ angular.module('swarmApp').controller 'LoadSaveCtrl', ($scope, $log, game, sessi
 
   # try to load a save file from the url.
   if (savedata = $location.search().savedata)?
-    $log.info 'loading game from url...'
-    # transient=true: don't overwrite the saved data until we buy something
-    game.importSave savedata, true
-    $log.info 'loading game from url successful!'
+    ts = $location.search().ts && new Date(parseInt($location.search().ts))
+    # If there is no timestamp, import the game. If there is one, verify that we're probably not nuking the same game-in-progress.
+    # If the current game was updated *before* the imported game was updated, accept the import - import is newer.
+    # If the current game was started *after* the imported game was updated, accept the import - it's probably deliberate, or it's a new game.
+    if (!ts || session.state.date.reified < ts || session.state.date.started > ts)
+      $log.info 'loading game from url...'
+      # transient=true: don't overwrite the saved data until we buy something
+      game.importSave savedata, true
+      $log.info 'loading game from url successful!'
+    else
+      $log.info "ignoring game in url, imported timestamp shouldn't overwrite current game", ts, session.state.date
 
   backfill.run game
 
 angular.module('swarmApp').controller 'AprilFoolsCtrl', ($scope, options) ->
   $scope.options = options
+  $scope.year = new Date().getFullYear()
 
 angular.module('swarmApp').controller 'WelcomeBackCtrl', ($scope, $log, $interval, game, $location) ->
   interval = null
@@ -100,7 +108,7 @@ angular.module('swarmApp').controller 'WelcomeBackCtrl', ($scope, $log, $interva
     # Store when the game was closed. Try to use the browser's onclose (onunload); that's most precise.
     # It's unreliable though (crashes fail, cross-browser's icky, ...) so use a heartbeat too.
     # Wait until showWelcomeBack is set before doing these, or it'll never show
-    $(window).unload -> game.session.onClose()
+    $(window).on 'unload', -> game.session.onClose()
     interval ?= $interval (-> game.session.onHeartbeat()), 60000
     game.session.onHeartbeat() # game.session time checks after this point will be wrong
 

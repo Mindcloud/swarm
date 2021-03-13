@@ -18,6 +18,9 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  //var path = require('path');
+  //var swPrecache = require('sw-precache');
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -63,10 +66,12 @@ module.exports = function (grunt) {
           autopushIntervalMs: 1000 * 60 * 9999,
           googleApiKey: 'AIzaSyArP8wzscVTyD4wBWZrhPnGWwj7W7ROaSI',
           isAppcacheEnabled: true,
+          playfabTitleId: 'F810',
           sentryDSN: null,
           sentrySampleRate: 0,
           isServerBackendEnabled: true,
           isServerFrontendEnabled: false,
+          isPaypalSandbox: true,
           gaTrackingID: null
         }
       }
@@ -90,19 +95,13 @@ module.exports = function (grunt) {
           isAppcacheEnabled: true,
           sentryDSN: 'https://c133b1e19aec40ea8e7641eb94f57004@app.getsentry.com/39317',
           sentrySampleRate: 1,
-          // Everyone's getting server-side accounts.
-          //
-          // Phase 1: import everything silently/invisibly, no change in
-          // behavior, full traffic without inconveniencing players when
-          // the server can't scale. Backend release.
-          //
-          // Phase 2: user accounts now visible. Frontend release.
-          //
-          // relevant issues: https://github.com/swarmsim/swarm/milestones/pre-1.1
-          // enable backend-only (silent release) in prod (phase 1): https://github.com/swarmsim/swarm/issues/586
-          isServerBackendEnabled: true,
+          // https://developer.playfab.com/en-us/F810/dashboard
+          playfabTitleId: 'F810',
+          // Abandoned server-side account variables.
+          isServerBackendEnabled: false,
           isServerFrontendEnabled: false,
 
+          isPaypalSandbox: true,
           gaTrackingID: 'UA-53523462-3'
         }
       }
@@ -124,11 +123,14 @@ module.exports = function (grunt) {
           isKongregateSyncEnabled: true,
           autopushIntervalMs: 1000 * 60 * 15,
           googleApiKey: 'AIzaSyCS8nqXFvhdr0AR-ox-9n_wKP2std_fHHs',
+          // https://developer.playfab.com/en-us/7487/dashboard
+          playfabTitleId: '7487',
           isAppcacheEnabled: false,
           sentryDSN: 'https://5b47c35e40a34619954d42f17712eb5f@app.getsentry.com/39331',
           sentrySampleRate: 0.001,
           isServerBackendEnabled: false,
           isServerFrontendEnabled: false,
+          isPaypalSandbox: false,
           gaTrackingID: 'UA-53523462-1'
         }
       }
@@ -183,6 +185,13 @@ module.exports = function (grunt) {
         },
         src: ['**']
       },
+      prodCoffee: {
+        options: {
+          branch: 'master',
+          repo: 'git@github.com:swarmsim-coffee/swarmsim-coffee.github.io.git'
+        },
+        src: ['**']
+      },
       prodGithubio: {
         options: {
           branch: 'master',
@@ -198,22 +207,22 @@ module.exports = function (grunt) {
     preloadSpreadsheet: {
       'v0.2': 'https://docs.google.com/spreadsheets/d/1ughCy983eK-SPIcDYPsjOitVZzY10WdI2MGGrmxzxF4/pubhtml',
     },
-    mxmlc: {
-      options: {
-        // Task-specific options go here.
+
+    // https://github.com/GoogleChrome/sw-precache/blob/master/demo/Gruntfile.js
+    swPrecache: {
+      dist: {
+        handleFetch: true,
+        //src: '<%= yeoman.app %>',
+        src: '<%= yeoman.dist %>',
+        dist: '<%= yeoman.dist %>',
       },
       dev: {
-        files:{
-          './.tmp/storage.swf' : ['./jsflash/dev/Storage.as']
-        }
-      },
-      prod: {
-        files:{
-          './dist/storage.swf' : ['./jsflash/prod/Storage.as']
-        },
+        handleFetch: false,
+        //src: '<%= yeoman.app %>',
+        src: '.tmp',
+        dist: '.tmp',
       },
     },
-
     manifest: {
       options: {
         basePath: '<%= yeoman.dist %>',
@@ -241,7 +250,7 @@ module.exports = function (grunt) {
       dev: {
         options:{
           basePath: '<%= yeoman.app %>',
-        },  
+        },
         src: [
           'views/*.html',
           'scripts/*.js',
@@ -261,7 +270,7 @@ module.exports = function (grunt) {
         },
         cwd: '<%= yeoman.app %>',
         // '**' not grabbing subdirs for some reason, do it manually
-        src: ['views/**.html', 'views/desc/unit/**.html', 'views/desc/upgrade/**.html'],
+        src: ['views/**.html', 'views/playfab/**.html', 'views/desc/unit/**.html', 'views/desc/upgrade/**.html'],
         dest: '.tmp/scripts/templateCache.js'
       },
       // no templates for dev, so they reload properly when changed
@@ -307,7 +316,7 @@ module.exports = function (grunt) {
       },
       manifest: {
         files: [ '<%= yeoman.app %>/{,*/}*.html',],
-        tasks: [ 'manifest' ]
+        tasks: [ 'manifest', 'swPrecache' ]
       },
       livereload: {
         options: {
@@ -329,7 +338,7 @@ module.exports = function (grunt) {
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: '0.0.0.0',
         //livereload: 55728  // ngrok won't bind remote ports below 50000
-        livereload: 35728 
+        livereload: 35728
       },
       livereload: {
         options: {
@@ -383,7 +392,7 @@ module.exports = function (grunt) {
       }
     },
     coffeelint: {
-    
+
       options: {
         configFile: 'coffeelint.json'
       },
@@ -441,7 +450,10 @@ module.exports = function (grunt) {
           },
           'decimal.js': {
             main: 'decimal.js'
-          }
+          },
+          'playfab-sdk': {
+            main: 'PlayFabSdk/src/PlayFab/PlayFabClientApi.js'
+          },
         },
         ignorePath:  /\.\.\//
       },
@@ -552,6 +564,7 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       manifest: ['<%= yeoman.dist %>/manifest.appcache'],
+      swPrecache: ['<%= yeoman.dist %>/service-worker.js'],
       js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
         assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images'],
@@ -665,6 +678,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             'static/**/*',
+            'repair/**/*',
             'releasewatch/**/*',
             '*.{ico,png,txt}',
             '.htaccess',
@@ -672,7 +686,10 @@ module.exports = function (grunt) {
             '*.svg',
             'views/{,*/}*.html',//'views/desc/unit/{,*/}*.html','views/desc/upgrade/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'storage.swf',
+            'service-worker.js', // this is the failsafe clear-cache-and-quit service worker. swPrecache works now, so no need for this. OH WAIT yes there is because it's still broken, ugh.
+            'manifest.json',
           ]
         }, {
           expand: true,
@@ -761,10 +778,13 @@ module.exports = function (grunt) {
         configFile: 'test/karma-integration.conf.coffee',
         singleRun: true
       }
-    }
+    },
+    githash: {
+      main: {}
+    },
   });
 
-  // One of few swarmapp-specific tasks
+  // Kongregate mtx changed? https://docs.google.com/spreadsheets/d/1ughCy983eK-SPIcDYPsjOitVZzY10WdI2MGGrmxzxF4/export?gid=1404187062&format=csv
   grunt.registerMultiTask('preloadSpreadsheet', 'Update spreadsheet data', function () {
     var Tabletop = require('tabletop');
     var stringify = require('json-stable-stringify');
@@ -773,14 +793,14 @@ module.exports = function (grunt) {
     var directory = 'app/scripts/spreadsheetpreload/';
     var url = this.data;
     var key = this.target;
-    
+
     var done = this.async();
     Tabletop.init({
       key: url,
       parseNumbers: true,
       debug: true,
       callback: function (data) {
-        data = _.pick(data, ['unittypes', 'upgrades', 'achievements', 'tutorial']);
+        data = _.pick(data, ['unittypes', 'upgrades', 'achievements', 'tutorial', 'mtx', 'mtx.playfabUpload']);
         data = _.mapValues(data, function(sheet) {
           return _.omit(sheet, ['raw']);
         });
@@ -788,18 +808,37 @@ module.exports = function (grunt) {
         //var text = JSON.stringify(data, null, 2);
         // built-in stringify puts sheets in a random order. Use a consistent
         // order with json-stable-stringify for cleaner diffs.
-        var keys = function(data) {
-          var ret = [];
-          for (var key in data) {
-            if (data.hasOwnProperty(key)) {
-              ret.push(key);
-            }
-          }
-          return ret;
-        };
         for (var sheetname in data) {
           data[sheetname] = _.pick(data[sheetname], ['column_names', 'elements', 'name']);
         }
+
+        // special case playfab uploads. Two files: main and free (zero-cost, for testing)
+        var playfab = {
+          CatalogVersion: 'main',
+          Catalog: data['mtx.playfabUpload'].elements,
+        };
+        delete data['mtx.playfabUpload'];
+        for (var i=0; i < playfab.Catalog.length; i++) {
+          var row = playfab.Catalog[i];
+          // this part's messy
+          //row.VirtualCurrencyPrices = {RM: 0}
+          row.VirtualCurrencyPrices = {RM: row['VirtualCurrencyPrices.RM']};
+          delete row['VirtualCurrencyPrices.RM'];
+        }
+        var playfabFile = directory + key + '.playfabUpload.main.json';
+        grunt.file.write(playfabFile, stringify(playfab, {space:'  '}));
+        console.log('Wrote '+playfabFile);
+
+        playfab.CatalogVersion = 'free';
+        for (var j=0; j < playfab.Catalog.length; j++) {
+          playfab.Catalog[j].DisplayName += ' (free)';
+          playfab.Catalog[j].VirtualCurrencyPrices.RM = 0;
+        }
+        playfabFile = directory + key + '.playfabUpload.free.json';
+        grunt.file.write(playfabFile, stringify(playfab, {space:'  '}));
+        console.log('Wrote '+playfabFile);
+
+        // end playfab; back to everything else
         var text = stringify(data, {space:'  '});
         text = '// This is an automatically generated file! Do not edit!\n// Edit the source at: '+url+'\n// Generated by Gruntfile.js:preloadSpreadsheet\n// key: '+key+'\n\'use strict\';\n\ntry {\n  angular.module(\'swarmSpreadsheetPreload\');\n  //console.log(\'second'+key+'\');\n}\ncatch (e) {\n  // module not yet initialized by some other module, we\'re the first\n  angular.module(\'swarmSpreadsheetPreload\', []);\n  //console.log(\'first'+key+'\');\n}\nangular.module(\'swarmSpreadsheetPreload\').value(\'spreadsheetPreload-'+key+'\', '+text+');';
         var filename = directory + key + '.js';
@@ -809,9 +848,18 @@ module.exports = function (grunt) {
       }
     });
   });
-  grunt.registerTask('writeVersionJson', 'write version info to a json file', function() {
+  grunt.registerTask('writeVersionJson', 'write version info to a json file', ['githash', '_writeVersionJson', 'preloadSpreadsheet']);
+  grunt.registerTask('_writeVersionJson', 'write version info to a json file', function() {
     var version = grunt.file.readJSON('package.json').version;
-    var data = {version:version, updated:new Date()};
+    var data = {
+      version: version,
+      updated: new Date(),
+      githash: grunt.config('githash.main'),
+    };
+    // Workaround for screwy service-worker update issues. The old updater detects a version change and is now refreshing before service-worker reloads and clears the cache, reviving our old friend the infinite-refresh bug. Workaround: fake out the version so we don't detect an update right away.
+    if (version === '1.1.5') {
+      data.version = '1.1.4';
+    }
     var text = JSON.stringify(data, undefined, 2);
     grunt.file.write('.tmp/version.json', text);
     grunt.file.write('dist/version.json', text);
@@ -819,11 +867,17 @@ module.exports = function (grunt) {
   grunt.registerTask('buildCname', 'build swarmsim.com cname file', function () {
     grunt.file.write('dist/CNAME', 'www.swarmsim.com');
   });
+  grunt.registerTask('coffeeCname', 'build coffee.swarmsim.com cname file', function () {
+    grunt.file.write('dist/CNAME', 'coffee.swarmsim.com');
+  });
   grunt.registerTask('stagingCname', 'build staging.swarmsim.com cname file', function () {
     grunt.file.write('dist/CNAME', 'staging.swarmsim.com');
   });
   grunt.registerTask('preprodCname', 'build preprod.swarmsim.com cname file', function () {
     grunt.file.write('dist/CNAME', 'preprod.swarmsim.com');
+  });
+  grunt.registerTask('publictestCname', 'build beta.swarmsim.com cname file', function () {
+    grunt.file.write('dist/CNAME', 'beta.swarmsim.com');
   });
   grunt.registerTask('cleanCname', 'build swarmsim.com cname file', function () {
     grunt.file.delete('dist/CNAME');
@@ -839,11 +893,12 @@ module.exports = function (grunt) {
     if (target === 'prod') {
       grunt.task.run([
         'clean:server',
-        'mxmlc:prod',
+        //'mxmlc:prod',
         'ngconstant:prod','writeVersionJson', 'ngtemplates:dist',
-        'manifest:prod',
-        'wiredep', 
+        'wiredep',
         'concurrent:server',
+        'swPrecache:dist',
+        //'manifest:prod',
         'autoprefixer',
         'connect:livereload',
         'watch'
@@ -852,11 +907,12 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'mxmlc:dev',
+      //'mxmlc:dev',
       'ngconstant:dev','writeVersionJson', 'ngtemplates:dev',
-      'manifest:dev',
       'wiredep',
       'concurrent:server',
+      'swPrecache:dev',
+      //'manifest:dev',
       'autoprefixer',
       'connect:livereload',
       'watch'
@@ -881,7 +937,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', function(envname) {
     envname = envname || 'prod';
-    if (envname != 'prod' && envname != 'preprod') {
+    if (envname !== 'prod' && envname !== 'preprod') {
       throw new Error('invalid build envname: '+envname);
     }
     console.log('building envname '+envname);
@@ -896,14 +952,19 @@ module.exports = function (grunt) {
       'concat',
       'ngmin',
       'copy:dist',
-      'cdnify',
+      //'cdnify',
       'cssmin',
       'uglify',
       'filerev',
-      'manifest',
+      // no need for both manifest.appcache and service-worker caching - similar result, but service-workers are newer
+      //'manifest',
+      'swPrecache:dist',
       'usemin',
       'htmlmin',
-      'mxmlc:prod'
+      // mxmlc stopped working at some point, but I can't be bothered to fix it properly.
+      // The compiled version is now saved in git, so we'll just use that and remove all
+      // flash deps from the build.
+      //'mxmlc:prod'
     ]);
   });
 
@@ -923,7 +984,7 @@ module.exports = function (grunt) {
   ]);
   grunt.registerTask('deploy-publictest', [
     'build',
-    'cleanCname','gh-pages:publictest'
+    'publictestCname','gh-pages:publictest','cleanCname'
   ]);
   grunt.registerTask('phonegap-staging', [
     'build',
@@ -941,6 +1002,49 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy-prod', [
     'build',
     'cleanCname','gh-pages:prodGithubio',
+    'coffeeCname','gh-pages:prodCoffee','cleanCname',
     'buildCname','gh-pages:prodDotcom','cleanCname'
   ]);
+  // https://github.com/GoogleChrome/sw-precache/blob/master/demo/Gruntfile.js
+  //function writeServiceWorkerFile(src, dist, handleFetch, callback) {
+  //  var config = {
+  //    cacheId: grunt.file.readJSON('package.json').name,
+  //    dynamicUrlToDependencies: {},
+  //    // If handleFetch is false (i.e. because this is called from swPrecache:dev), then
+  //    // the service worker will precache resources but won't actually serve them.
+  //    // This allows you to test precaching behavior without worry about the cache preventing your
+  //    // local changes from being picked up during the development cycle.
+  //    handleFetch: handleFetch,
+  //    logger: grunt.log.writeln,
+  //    staticFileGlobs: [
+  //      src + '/css/**.css',
+  //      src + '/**.html',
+  //      src + '/images/**.*',
+  //      src + '/static/**.*',
+  //      src + '/styles/**.*',
+  //      src + '/**.swf',
+  //      src + '/**.ico',
+  //      src + '/**.png',
+  //      src + '/scripts/**/*.js',
+  //    ],
+  //    stripPrefix: src + '/',
+  //    // verbose defaults to false, but for the purposes of this demo, log more.
+  //    verbose: true,
+  //  };
+  //
+  //  swPrecache.write(path.join(dist, 'service-worker.js'), config, callback);
+  //}
+  grunt.registerMultiTask('swPrecache', function() {
+    //// This is broken again? I give up, not worth it.
+    //var done = this.async();
+    //var src = this.data.src;
+    //var dist = this.data.dist;
+    //var handleFetch = this.data.handleFetch;
+    //writeServiceWorkerFile(src, dist, handleFetch, function(error) {
+    //  if (error) {
+    //    grunt.fail.warn(error);
+    //  }
+    //  done();
+    //});
+  });
 };

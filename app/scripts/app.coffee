@@ -19,31 +19,15 @@ angular.module 'swarmApp', [
     'swarmEnv', 'swarmSpreadsheetPreload'
     # http://luisfarzati.github.io/angulartics/
     'angulartics', 'angulartics.google.analytics'
-    # https://github.com/chieffancypants/angular-hotkeys/
-    # TODO: hotkeys disabled for now.
-    #'cfp.hotkeys'
     'googlechart'
+    # https://github.com/chieffancypants/angular-hotkeys/
+    'cfp.hotkeys'
   ]
 
-angular.module('swarmApp').config (version, env) ->
-  # run this first to log other init errors.
-  # tests don't have a dsn, don't setup raven at all
-  # skip multiple runs of setup for dev - happens when unittesting, clutters output - but prod must always run this
-  if env.sentryDSN and ((not env.isDebugEnabled) or (not Raven.isSetup()))
-    filters = [
-      # https://app.getsentry.com/swarm-simulator/swarmsim/group/57518714/
-      /Permission denied to access property ['\"]toString/
-    ]
-    Raven.config(env.sentryDSN,
-      # http://raven-js.readthedocs.org/en/latest/config/
-      release: version
-      maxMessageLength: 200
-      shouldSendCallback: (data) ->
-        for filter in filters
-          if filter.test data.message
-            return
-        return Math.random() < env.sentrySampleRate
-    ).install()
+# Angular 1.6 makes urls start with '#!' instead of '#', but swarmsim predates that and has lots of non-#! urls out there already.
+# https://docs.angularjs.org/guide/migration#migrating-from-1-4-to-1-5
+angular.module('swarmApp').config ($locationProvider) ->
+  $locationProvider.hashPrefix ''
 
 angular.module('swarmApp').config ($routeProvider, env) ->
   if env.isOffline
@@ -63,6 +47,9 @@ angular.module('swarmApp').config ($routeProvider, env) ->
       .when '/importsplash',
         templateUrl: 'views/importsplash.html'
         controller: 'ImportsplashCtrl'
+      .when '/export',
+        templateUrl: 'views/export.html'
+        controller: 'ExportCtrl'
       .otherwise
         redirectTo: '/'
 
@@ -100,6 +87,9 @@ angular.module('swarmApp').config ($routeProvider, env) ->
     .when '/cleartheme',
       templateUrl: 'views/cleartheme.html'
       controller: 'ClearthemeCtrl'
+    .when '/export',
+      templateUrl: 'views/export.html'
+      controller: 'ExportCtrl'
     .when '/login',
       if not env.isServerFrontendEnabled
         redirectTo: '/'
@@ -115,6 +105,9 @@ angular.module('swarmApp').config ($routeProvider, env) ->
     .when '/decimallegend',
       templateUrl: 'views/decimallegend.html'
       controller: 'DecimallegendCtrl'
+    #.when '/news-archive',
+    #  templateUrl: 'views/news-archive.html'
+    #  controller: 'NewsArchiveCtrl'
     .otherwise
       redirectTo: '/'
 
@@ -138,25 +131,67 @@ angular.module('swarmApp').run (env, $location, $log) ->
     window.location.protocol = 'https'
     $log.debug "window.location.protocol = 'https:'"
 
-# swarmsim.github.io is the place to play swarmsim standalone, for legacy
-# reasons. It'll eventually move to swarmsim.com, but that migration's a long
-# process that's not done (or started) yet.
+# originally, [www.]swarmsim.com redirected to swarmsim.github.io, like so:
+#  if (window.location.host == 'swarmsim.com' || window.location.host == 'www.swarmsim.com')
+#    window.location.host = 'swarmsim.github.io'
+# It started there, and I didn't want to move cookies after buying the domain.
+# Then, MS bought github and I got spooked. Time to move everyone to the dot-com.
 #
 # Kongregate uses swarmsim.com - it was implemented later and has no legacy
 # savestates to worry about.
 #
 # I don't want people playing in two standalone locations, juggling savestates.
-# There's "Kongregate" and there's "standalone"; no more urls. So, redirect
-# standalone visitors from swarmsim.com to swarmsim.github.io until the
-# migration's done. One exception: ?noredirect=1, for debugging/power-users.
+# There's "Kongregate" and there's "standalone"; no more urls. Redirect all
+# standalone users to the canonical standalone url.
+# One exception: ?noredirect=1, for debugging/power-users.
 #
-# Github automatically redirects the .github.io address behind swarmsim.com to
-# swarmsim.com itself.
+# Github automatically redirects swarmsim-dotcom.github.io - the backend for
+# swarmsim.com - to swarmsim.com itself.
 #
 # Github automatically redirects the naked-domain to www.
-angular.module('swarmApp').run ($location, isKongregate) ->
-  if (window.location.host == 'swarmsim.com' || window.location.host == 'www.swarmsim.com') and not ($location.search().noredirect or isKongregate())
-    window.location.host = 'swarmsim.github.io'
+angular.module('swarmApp').factory 'domain', ($location) ->
+  return $location.search().mockdomain || window.location.host
+
+angular.module('swarmApp').factory 'enableAfter', ($log) ->
+  return (enableDate, loggedName) -> () ->
+    diff = Date.now() - enableDate.getTime()
+    enabled = diff >= 0
+    if (loggedName?)
+      $log.info('enableAfter', loggedName, enabled, diff)
+    return enabled
+
+angular.module('swarmApp').value 'wwwNagDate', new Date('2018-06-08T00:00:00.000Z')
+angular.module('swarmApp').factory 'wwwNagTimer', (enableAfter, wwwNagDate) -> enableAfter(wwwNagDate, 'wwwNag')
+angular.module('swarmApp').value 'wwwRedirectDate', new Date('2018-07-15T00:00:00.000Z')
+angular.module('swarmApp').factory 'wwwRedirectTimer', (enableAfter, wwwRedirectDate) -> enableAfter(wwwRedirectDate, 'wwwRedirect')
+
+angular.module('swarmApp').factory 'domainType', ($location, isKongregate, domain, wwwNagTimer) ->
+  if (isKongregate())
+    return 'kongregate'
+  if ($location.search().noredirect)
+    return 'other'
+  if (domain == 'www.swarmsim.com' || domain == 'swarmsim.com')
+    return 'www'
+  # Disable the migration alerts in prod for a few days, until users' browser
+  # caches clear and www.swarmsim.com stops redirecting. Mocks still work.
+  #if (domain == 'swarmsim.github.io')
+  if ((if wwwNagTimer() then domain else $location.search().mockdomain) == 'swarmsim.github.io')
+    return 'oldwww'
+  return 'other'
+
+angular.module('swarmApp').factory 'isRedirectingOldDomain', ($location, domainType, wwwRedirectTimer) ->
+  # Phase 1: allow players on both: No redirect, yet!
+  # Phase 2: github redirects to www.
+  if ($location.search().wwwredirect)
+    # more readable than one line with all the conditions
+    return true
+  return (domainType == 'oldwww') and wwwRedirectTimer()
+
+angular.module('swarmApp').run ($location, isRedirectingOldDomain) ->
+  if (isRedirectingOldDomain and $location.path() != '/export')
+    # $location.path('/export')
+    window.location = 'https://www.swarmsim.com/#/referrer=github'
+
 
 # Google analytics setup. Run this only after redirects are done.
 angular.module('swarmApp').config (env, version) ->
@@ -166,6 +201,7 @@ angular.module('swarmApp').config (env, version) ->
     # appVersion breaks analytics, presumably because it's mobile-only.
     #window.ga 'set', 'appVersion', version
     # set Kongregate referrer manually when using kongregate_shell.html
+    window.ga 'set', 'anonymizeIp', true
     try
       if window.parent != window and (ref=window?.parent?.document?.referrer)?
         window.ga 'set', 'referrer', ref
@@ -184,11 +220,49 @@ angular.module('swarmApp').run ($rootScope) ->
 
 angular.module('swarmApp').value 'UNIT_LIMIT', '1e100000'
 
-angular.module('swarmApp').run ($rootScope, env) ->
-  #Decimal.config errors:false
-  if env.isAppcacheEnabled
-    appCacheNanny.set('loaderPath', '/views/appcache-loader.html')
-    if env.isDebugEnabled
-      appCacheNanny.start({checkInterval: 60 * 1000})  #60 seconds on debug
-    #else
-      #appCacheNanny.start({checkInterval: 30000}) #30 seconds is default
+# global keyboard shortcuts
+angular.module('swarmApp').run (hotkeys, $location) ->
+  locationKeys = [
+    ['m', '/tab/meat', 'Open the meat tab']
+    ['l', '/tab/larva', 'Open the larva tab']
+    ['t', '/tab/territory', 'Open the territory tab']
+    ['e', '/tab/energy', 'Open the energy tab']
+    ['u', '/tab/mutagen', 'Open the mutagen tab']
+    ['a', '/tab/all', 'Open the all-units tab']
+    ['o', '/options', 'Open the options screen']
+    ['y', '/achievements', 'Open the achievements screen']
+    ['shift+y', '/statistics', 'Open the statistics screen']
+    ['n', '/changelog', 'Open the patch notes screen']
+  ]
+  for [combo, path, desc] in locationKeys then do (combo, path, desc) ->
+    hotkeys.add
+      combo: combo
+      description: desc
+      callback: () -> $location.path path
+angular.module('swarmApp').run (hotkeys, $rootScope) ->
+  # obfuscate a little, just to make things interesting
+  reverse = (str) ->
+    str = str.split ''
+    str.reverse()
+    return str.join ''
+  hotkeys.add
+    combo: reverse 'l e u q e s'
+    callback: () -> $rootScope.$emit reverse 'noitseuqthgireht'
+
+#angular.module('swarmApp').run (isKongregate, env) ->
+#  # https://github.com/xsolla/paystation-embed
+#  console.log 'xsolla?'
+#  if !isKongregate()
+#    console.log 'xsolla loading'
+#    # lazy load the non-kongregate payment processor
+#    $.getScript 'https://static.xsolla.com/embed/paystation/1.0.7/widget.min.js', (data, status, xhr) ->
+#      console.log 'xsolla loaded'
+#      XPayStationWidget.init
+#        access_token: env.xsollaAccessToken
+#  else
+#    console.log 'xsolla ignored'
+
+# not sure why dropdowns don't work on their own anymore, but this fixes it
+angular.module('swarmApp').run () ->
+  $(document).on 'mousedown', '.dropdown-toggle', () ->
+    $(this).dropdown()

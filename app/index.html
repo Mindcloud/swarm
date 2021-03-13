@@ -1,22 +1,24 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <!--
 
 Hi there! The non-minified source code is a lot easier to read:
-https://github.com/erosson/swarm
+https://github.com/swarmsim/swarm
 
 -->
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="en-US" />
     <title>Swarm Simulator</title>
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <meta name="description" content="An incremental game. Starting with just a few larvae and a small pile of meat, grow a massive swarm of giant bugs.">
-    <link rel="canonical" href="https://swarmsim.github.io">
+    <link rel="canonical" href="https://www.swarmsim.com">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.css" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/angular-hotkeys/build/hotkeys.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-hotkeys/build/hotkeys.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -42,6 +44,7 @@ https://github.com/erosson/swarm
     <!-- For iPhone 6 Plus with @3× display: -->
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">
     <!-- For Chrome for Android: -->
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="touch-icon-192x192.png">
     <!-- Nice stuff for Metro -->
     <meta name="application-name" content="Swarm Simulator"/>
@@ -50,6 +53,9 @@ https://github.com/erosson/swarm
     <meta name="msapplication-square70x70logo" content="metro_tile-70x70.png"/>
     <meta name="msapplication-square150x150logo" content="metro_tile-150x150.png"/>
     <meta name="msapplication-square310x310logo" content="metro_tile-310x310.png"/>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#800080">
   </head>
   <body ng-app="swarmApp">
     <!--[if lt IE 9]>
@@ -57,6 +63,7 @@ https://github.com/erosson/swarm
     <![endif]-->
 
     <div class="container">
+      <p class="browsehappy safarisupport" style="display:none">Swarm Simulator does not support the Safari browser. If you have trouble, <a href="http://browsehappy.com/">please try Chrome or Firefox</a>.</p>
       <div class="navbar navbar-default" role="navigation" ng-controller="HeaderCtrl">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,7 +79,7 @@ https://github.com/erosson/swarm
             <a class="navbar-brand" ng-href="#/changelog"><span class="text-muted small" ng-cloak>v{{version}}</span></a>
           </div>
           <div class="navbar-right"><login /></div>
-      
+
           <!--div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -124,14 +131,13 @@ https://github.com/erosson/swarm
               <a ng-href="#{{gain.unit.url()}}" ng-click="closeWelcomeBack()">{{gain.unit.unittype.plural}}</a>
             </li>
           </ul>
-          <newslink ng-cloak></newslink>
         </div>
       </div>
       <div ng-cloak ng-controller="AprilFoolsCtrl">
         <div id="aprilfools-news" class="alert alert-info alert-dismissable animif" role="alert" ng-if="options.aprilFoolsState() != 'off'">
           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           <div ng-if="options.aprilFoolsState() === 'on'">
-            <span title="Really. Honest. Would I lie to you?" class="small pull-right">2016/04/01</span>
+            <span title="Really. Honest. Would I lie to you?" class="small pull-right">{{year}}/04/01</span>
             <div ng-if="!options.isAprilFoolsTheme()">
               <p><strong title="Really. Honest. Would I lie to you?">Exciting changes are coming to Swarm Simulator soon!</strong></p>
               <p>Insects are too icky, so we're changing our name. Also, we'll require graphics to play.</p>
@@ -144,7 +150,7 @@ https://github.com/erosson/swarm
             </div>
           </div>
           <div ng-if="options.aprilFoolsState() === 'after'">
-            <span class="small pull-right">2015/04/02</span>
+            <span class="small pull-right">{{year}}/04/02</span>
             <p>I hope you enjoyed yesterday's April Fools joke!</p>
             <p><a href="#/cleartheme?themeExtra=@import%20url%28'/static/kittens.css'%29;">Click here to keep the kitten pictures.</a> To remove them later, go to the options screen and click "Clear all extra styling/graphics".</p>
           </div>
@@ -190,6 +196,7 @@ https://github.com/erosson/swarm
       //ga('create', 'UA-53523462-3', 'auto');
       //ga('send', 'pageview'); // angulartics does this
     </script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -197,39 +204,40 @@ https://github.com/erosson/swarm
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/tabletop/src/tabletop.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/SHA-1/sha1.js"></script>
     <script src="bower_components/angulartics/src/angulartics.js"></script>
-    <script src="bower_components/sjcl/sjcl.js"></script>
-    <script src="bower_components/mathjs/dist/math.js"></script>
-    <script src="bower_components/lz-string/libs/lz-string.js"></script>
-    <script src="bower_components/numeral/numeral.js"></script>
-    <script src="bower_components/konami-js/konami.js"></script>
-    <script src="bower_components/angular-hotkeys/build/hotkeys.min.js"></script>
-    <script src="bower_components/favico.js/favico.js"></script>
-    <script src="bower_components/seedrandom/seedrandom.js"></script>
-    <script src="bower_components/decimal.js/decimal.js"></script>
-    <script src="bower_components/dropbox-datastores-1.0-latest/index.js"></script>
-    <script src="bower_components/moment-duration-format/lib/moment-duration-format.js"></script>
-    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
-    <script src="bower_components/appcache-nanny/appcache-nanny.js"></script>
-    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
-    <script src="bower_components/swarm-shared/browser.js"></script>
-    <script src="bower_components/flash-cookies/dist/swfstore.min.js"></script>
+    <script src="bower_components/angulartics-google-analytics/lib/angulartics-ga.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/raven-js/dist/raven.js"></script>
-    <script src="bower_components/angulartics-google-analytics/lib/angulartics-google-analytics.js"></script>
-    <script src="bower_components/lodash-compat/lodash.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/decimal.js/decimal.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/favico.js/favico.js"></script>
+    <script src="bower_components/flash-cookies/dist/swfstore.min.js"></script>
+    <script src="bower_components/jquery-cookie/jquery.cookie.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/konami-js/konami.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/lz-string/libs/lz-string.js"></script>
+    <script src="bower_components/mathjs/dist/math.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment-duration-format/lib/moment-duration-format.js"></script>
+    <script src="bower_components/numeral/numeral.js"></script>
+    <script src="bower_components/playfab-sdk/PlayFabSdk/src/PlayFab/PlayFabClientApi.js"></script>
+    <script src="bower_components/seedrandom/seedrandom.js"></script>
+    <script src="bower_components/sjcl/sjcl.js"></script>
+    <script src="bower_components/swarm-persist/dist/swarm-persist.js"></script>
+    <script src="bower_components/swarm-numberformat/dist/swarm-numberformat.js"></script>
+    <script src="bower_components/angular-hotkeys/build/hotkeys.js"></script>
+    <script src="bower_components/qs/dist/qs.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -275,7 +283,6 @@ https://github.com/erosson/swarm
         <script src="scripts/services/kongregate.js"></script>
         <script src="scripts/services/seedrand.js"></script>
         <script src="scripts/services/backfill.js"></script>
-        <script src="scripts/controllers/dropboxdatastore.js"></script>
         <script src="scripts/filters/moment.js"></script>
         <script src="scripts/services/feedback.js"></script>
         <script src="scripts/controllers/contact.js"></script>
@@ -290,11 +297,43 @@ https://github.com/erosson/swarm
         <script src="scripts/services/user_api.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/debugapi.js"></script>
-        <script src="scripts/directives/newslink.js"></script>
         <script src="scripts/controllers/decimallegend.js"></script>
         <script src="scripts/directives/converttonumber.js"></script>
+        <script src="scripts/directives/playfab.js"></script>
+        <script src="scripts/directives/playfabauth.js"></script>
+        <script src="scripts/directives/playfaboptions.js"></script>
+        <script src="scripts/services/playfab.js"></script>
+        <script src="scripts/controllers/news-archive.js"></script>
+        <script src="scripts/directives/news-modal.js"></script>
+        <script src="scripts/services/mtx.js"></script>
+        <script src="scripts/directives/buyunit-input.js"></script>
+        <script src="scripts/directives/crystaltimer.js"></script>
+        <script src="scripts/directives/dropdown-menu-auto-direction.js"></script>
+        <script src="scripts/controllers/export.js"></script>
+        <script src="scripts/directives/domainchange.js"></script>
+        <script src="scripts/directives/elm.js"></script>
         <!-- endbuild -->
 </body>
+<script>
+// this is hideous, but we're broken in safari, don't have a mac to fix it with, and kong staff insists on this
+var ua = window && window.navigator && window.navigator.userAgent
+var isSafari = ua.match(/Version\/(\S+).*?Safari\//);
+if (isSafari) {
+  jQuery('.safarisupport').style({'display':'initial'});
+}
+</script>
+<script>
+// https://codelabs.developers.google.com/codelabs/add-to-home-screen/#5
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(reg){
+      console.log("service worker registered");
+    }).catch(function(err) {
+      console.warn("service worker registration failed", err)
+    });
+  });
+}
+</script>
 </html>
 
 <!-- MEOW -->

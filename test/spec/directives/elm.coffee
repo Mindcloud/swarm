@@ -1,6 +1,6 @@
 'use strict'
 
-xdescribe 'Directive: newslink', ->
+describe 'Directive: elm', ->
 
   # load the directive's module
   beforeEach module 'swarmApp'
@@ -11,6 +11,6 @@ xdescribe 'Directive: newslink', ->
     scope = $rootScope.$new()
 
   xit 'should make hidden element visible', inject ($compile) ->
-    element = angular.element '<newslink></newslink>'
+    element = angular.element '<elm></elm>'
     element = $compile(element) scope
-    expect(element.text()).toBe 'this is the newslink directive'
+    expect(element.text()).toBe 'this is the elm directive'

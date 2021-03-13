@@ -6,7 +6,7 @@
  # @description
  # # buyunit
 ###
-angular.module('swarmApp').directive 'buyunit', ($log, game, commands) ->
+angular.module('swarmApp').directive 'buyunit', ($log, game, commands, hotkeys) ->
   templateUrl: 'views/buyunit.html'
   scope:
     num: '=?'
@@ -25,7 +25,7 @@ angular.module('swarmApp').directive 'buyunit', ($log, game, commands) ->
       num = scope.num ? 1
       num = Decimal.max 1, Decimal.min scope.resource.maxCostMet(), new Decimal(num+'').floor()
       if num.isNaN()
-        num = Decimal.ONE
+        num = new Decimal(1)
       return num
 
     scope.unit = scope.resource = game.unit scope.unit
@@ -42,11 +42,34 @@ angular.module('swarmApp').directive 'buyunit', ($log, game, commands) ->
     scope.isBuyButtonVisible = -> scope.resource.isBuyButtonVisible()
     scope.verb = scope.unit?.type?.verb ? 'buy'
 
-angular.module('swarmApp').directive 'buyupgrade', ($log, game, commands) ->
+    # This assumes there's only one buyunit on the screen at a time - currently true
+    hotkeys.bindTo(scope)
+    .add
+      combo:'alt+b'
+      description: _.capitalize(scope.verb)+' '+scope.resource.type.plural
+      callback: () ->
+        if scope.resource.isCostMet()
+          scope.buyResource {resource: scope.resource, num: scope.fullnum()}
+    #.add
+    #  combo:'ctrl+alt+b'
+    #  description: _.capitalize(scope.verb)+' 25% '+scope.resource.type.plural,
+    #  callback: () ->
+    #    if scope.is25Visible()
+    #      scope.buyMaxResource {resource: scope.resource, percent: 0.25}
+    .add
+      combo:'shift+alt+b'
+      description: _.capitalize(scope.verb)+' max '+scope.resource.type.plural,
+      callback: () ->
+        if scope.resource.maxCostMet().greaterThan(1)
+          scope.buyMaxResource {resource: scope.resource, percent: 1}
+
+
+angular.module('swarmApp').directive 'buyupgrade', ($log, game, commands, hotkeys) ->
   templateUrl: 'views/buyunit.html'
   scope:
     num: '=?'
     upgrade: '='
+    index: '=?'
   restrict: 'E'
   link: (scope, element, attrs) ->
     scope.commands = commands
@@ -57,7 +80,7 @@ angular.module('swarmApp').directive 'buyupgrade', ($log, game, commands) ->
       num = scope.num ? 1
       num = Decimal.max 1, Decimal.min scope.resource.maxCostMet(), new Decimal(num+'').floor()
       if num.isNaN()
-        num = Decimal.ONE
+        num = new Decimal(1)
       return num
 
     scope.upgrade = scope.resource = game.upgrade scope.upgrade
@@ -70,9 +93,21 @@ angular.module('swarmApp').directive 'buyupgrade', ($log, game, commands) ->
       args.upgrade = args.resource
       delete args.resource
       commands.buyMaxUpgrade args
-    scope.statTwin = -> Decimal.ONE
+    scope.statTwin = -> new Decimal(1)
     scope.isBuyButtonVisible = -> true
     scope.verb = if scope.upgrade.type.class == 'ability' then 'cast' else 'buy'
+
+    keys = '1234567890-='
+    if scope.index?
+      console.log('bind upgrade key', scope.index)
+      key = keys[scope.index]
+      hotkeys.bindTo(scope)
+      .add
+        combo:'alt+shift+'+key
+        description: _.capitalize(scope.verb)+' '+scope.resource.type.label
+        callback: (event) ->
+          if scope.resource.isCostMet()
+            scope.buyResource {resource: scope.resource, num: scope.fullnum()}
 
 angular.module('swarmApp').directive 'buyunitdropdown', ($log, game, commands) ->
   templateUrl: 'views/buyunit-dropdown.html'
@@ -90,7 +125,7 @@ angular.module('swarmApp').directive 'buyunitdropdown', ($log, game, commands) -
       num = scope.num ? 1
       num = Decimal.max 1, Decimal.min scope.unit.maxCostMet(), new Decimal(num+'').floor()
       if num.isNaN()
-        num = Decimal.ONE
+        num = new Decimal(1)
       return num
     scope.filterVisible = (upgrade) ->
       upgrade.isVisible()
